@@ -32,11 +32,11 @@ body {
 }
 .logo {
     display: block;
-    width: 25%;
+    width: 28%;
     margin: 0px auto;
     position: relative;
     top: -50px;
-    left: 100px;
+    left: 40px;
 }
 .home-canvas .bottom .characters {
     display: block;
@@ -231,7 +231,7 @@ body {
     margin: 0px auto;
     position: relative;
     top: 50px;
-    left: 100px;
+    left: 70px;
 }
 
 .coins {
@@ -240,7 +240,6 @@ body {
 
 .battleground {
     height: 400px;
-    /* width: 80vw; */
     margin: 20px auto;
     display: flex;
     align-items: center;
@@ -271,14 +270,6 @@ body {
     text-align: center;
     color: #fff;
     font-family: 'Montserrat';
-}
-.player-card .coins span::before {
-    content: url('images/Icons/twmcoin.png');
-    margin-top: auto;
-    position: relative;
-    top: 5px;
-    left: -30px;
-    text-align: left;
 }
 #versus {
     width: 160px;
@@ -329,4 +320,45 @@ body {
     background: url('images/Backgrounds/palace.png');
     background-position: center;
     background-size: cover;
+}
+
+#player1 .coins span::after {
+    content: url('images/Icons/twmcoin.png');
+    margin-top: auto;
+    position: relative;
+    top: 5px;
+    right: -30px;
+    text-align: left;
+}
+
+#player2 .coins span::before {
+    content: url('images/Icons/twmcoin.png');
+    margin-top: auto;
+    position: relative;
+    top: 5px;
+    left: -30px;
+    text-align: left;
+}
+
+@keyframes spinRightCoin {
+    0% {
+        top: 0px;
+        right: 0px;
+        transform: rotate(0deg);
+    }
+    0% {
+        top: 0px;
+        right: -60px;
+        transform: rotate(0deg);
+    }
+    0% {
+        top: 0px;
+        right: 0px;
+        transform: rotate(0deg);
+    }
+    0% {
+        top: 0px;
+        right: 0px;
+        transform: rotate(0deg);
+    }
 }
