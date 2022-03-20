@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rishi Bajpai">
+    <title>TWM - Chor Police</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" /> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="canvas places palace">
+        <div class="topbar">
+            <div class="gamelogo">
+                <img src="images/game-levels/palace.png" class="logo" alt="logo">
+            </div>
+            <div class="store">
+                <a href="#" class="image-navigation">
+                    <img src="images/Icons/Homepage_CoinsDisplay.png" alt="coins" class="icons">
+                    <span id="coins">1234</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="battleground">
+            <div class="player-card" id="player1">
+                <img src="images/Icons/Home Profile Picture.png" alt="" id="playerOneImage" class="player">
+                <h3 id="playerOneName">AHMED</h3>
+                <div class="coins"><span id="playerOneCoins">100</span></div>
+            </div>
+            <div id="versus">
+                <img src="images/Icons/versus.png" alt="" id="vs">
+                <img src="images/Icons/battlecoins.png" alt="" id="battlecoins">
+                <span id="coinstake">1234</span>
+            </div>
+            <div class="player-card" id="player2">
+                <img src="images/Icons/Home Profile Picture.png" alt="" id="playerTwoImage" class="player">
+                <h3 id="playerTwoName">GEORGE</h3>
+                <div class="coins"><span id="playerTwoCoins">100</span></div>
+            </div>
+        </div>
+
+        <div class="bottomnav">
+            <a href="places.html">
+                <img src="images/Icons/Home_backButton.png" alt="back" class="icons">
+            </a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        
+        $('.slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            centerMode: true,
+            variableWidth: true,
+            infinite: true,
+            focusOnSelect: true,
+            cssEase: 'linear',
+            touchMove: true,
+            prevArrow:'<button class="slick-prev"> <img src="images/Icons/prevbutton.png" alt=""> </button>',
+            nextArrow:'<button class="slick-next"> <img src="images/Icons/nextbutton.png" alt=""> </button>',
+            
+            //         responsive: [                        
+            //             {
+            //               breakpoint: 576,
+            //               settings: {
+            //                 centerMode: false,
+            //                 variableWidth: false,
+            //               }
+            //             },
+            //         ]
+            });
+
+            var imgs = $('.slider img');
+            imgs.each(function(){
+                var item = $(this).closest('.item');
+                item.css({
+                    'background-image': 'url(' + $(this).attr('src') + ')', 
+                    'background-position': 'center',            
+                    '-webkit-background-size': 'contain',
+                    'background-size': 'contain', 
+                });
+                $(this).hide();
+            });
+
+    </script>
+
+</body>
+</html>
