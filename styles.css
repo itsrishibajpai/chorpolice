@@ -32,11 +32,11 @@ body {
 }
 .logo {
     display: block;
-    width: 28%;
+    width: 25%;
     margin: 0px auto;
     position: relative;
     top: -50px;
-    left: 40px;
+    left: 20px;
 }
 .home-canvas .bottom .characters {
     display: block;
@@ -52,7 +52,7 @@ body {
     width: 200px;
     margin: 0px auto;
     position: relative;
-    top: -60px;
+    top: -90px;
     left: 25px;
     border-radius: 26px;
     filter: saturate(80%);
@@ -279,7 +279,6 @@ body {
 
 #vs {
     width: 120px;
-    margin-top: 40px;
     padding: 10px;
 }
 
@@ -326,39 +325,85 @@ body {
     content: url('images/Icons/twmcoin.png');
     margin-top: auto;
     position: relative;
+    filter: saturate(150%);
     top: 5px;
     right: -30px;
     text-align: left;
+    animation: 0.15s ease-in 15 spinRightCoin;
 }
 
 #player2 .coins span::before {
     content: url('images/Icons/twmcoin.png');
     margin-top: auto;
     position: relative;
+    filter: saturate(150%);
     top: 5px;
     left: -30px;
     text-align: left;
+    animation: 0.15s ease-in 15 spinLeftCoin;
 }
 
 @keyframes spinRightCoin {
-    0% {
+    0%{ 
+        top: -120px;
+        right: -220px;
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    10% {
         top: 0px;
         right: 0px;
-        transform: rotate(0deg);
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.2;
     }
-    0% {
+    40% {
         top: 0px;
         right: -60px;
-        transform: rotate(0deg);
+        transform: scale(1.2) rotate(60deg);
+        opacity: 1;
     }
-    0% {
-        top: 0px;
-        right: 0px;
-        transform: rotate(0deg);
+    60% {
+        top: -60px;
+        right: -110px;
+        transform: scale(0.6) rotate(45deg);
+        opacity: 0.3;
     }
-    0% {
+    100% {
+        top: -110px;
+        right: -210px;
+        transform: scale(1) rotate(45deg);
+        opacity: .8;
+    }
+}
+@keyframes spinLeftCoin {
+    0%{
+        top: -120px;
+        left: -220px;
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    10% {
         top: 0px;
-        right: 0px;
-        transform: rotate(0deg);
+        left: 0px;
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.2;
+    }
+    40% {
+        top: 0px;
+        left: -60px;
+        transform: scale(1.2) rotate(60deg);
+        opacity: 1;
+    }
+    60% {
+        top: -60px;
+        left: -110px;
+        transform: scale(0.6) rotate(45deg);
+        opacity: 0.3;
+    }
+    100% {
+        top: -110px;
+        left: -210px;
+        transform: scale(1) rotate(45deg);
+        opacity: .8;
     }
 }
