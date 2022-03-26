@@ -29,7 +29,15 @@
             <div class="player-card" id="player1">
                 <img src="images/Icons/Home Profile Picture.png" alt="" id="playerOneImage" class="player">
                 <h3 id="playerOneName">AHMED</h3>
-                <div class="coins"><span id="playerOneCoins">100</span></div>
+                <div class="coins">
+                    <span id="playerOneCoins">1000</span>
+                    <span class="coin-single coin-left"></span>
+                    <span class="coin-single coin-left"></span>
+                    <span class="coin-single coin-left"></span>
+                    <span class="coin-single coin-left"></span>
+                    <span class="coin-single coin-left"></span>
+                    <span class="coin-single coin-left"></span>
+                </div>
             </div>
             <div id="versus">
                 <img src="images/Icons/versus.png" alt="" id="vs">
@@ -39,7 +47,15 @@
             <div class="player-card" id="player2">
                 <img src="images/Icons/Home Profile Picture.png" alt="" id="playerTwoImage" class="player">
                 <h3 id="playerTwoName">GEORGE</h3>
-                <div class="coins"><span id="playerTwoCoins">100</span></div>
+                <div class="coins">
+                    <span class="coin-single coin-right"></span>
+                    <span class="coin-single coin-right"></span>
+                    <span class="coin-single coin-right"></span>
+                    <span class="coin-single coin-right"></span>
+                    <span class="coin-single coin-right"></span>
+                    <span class="coin-single coin-right"></span>
+                    <span id="playerTwoCoins">1000</span>
+                </div>
             </div>
         </div>
 
@@ -90,6 +106,13 @@
                     'background-size': 'contain', 
                 });
                 $(this).hide();
+            });
+
+            $(document).ready(function () {
+                // Handler for .ready() called.
+                window.setTimeout(function () {
+                    location.href = "playground.html?filename=temple.png";
+                }, 5000);
             });
 
     </script>
