@@ -11,12 +11,15 @@
 </head>
 <body>
     <div id="game-canvas">
+
         <div id="topbar">
             <img src="images/Icons/Top Bar Gameplay.png" alt="">
         </div>
 
         <div id="boxes">
-            <img src="images/Boxes/Stone Box.png" alt="box" id="stone" class="floating-box animatebox">
+            <a href="#" id="stonebox">
+                <img src="images/Boxes/Stone Box.png" alt="box" id="stone" class="floating-box animatebox">
+            </a>
             <img src="images/Boxes/Silver.png" alt="box" id="silver" class="floating-box animatebox">
             <img src="images/Boxes/Gold.png" alt="box" id="gold" class="floating-box animatebox">
             <img src="images/Boxes/Platinum.png" alt="box" id="platinum" class="floating-box animatebox">
@@ -27,11 +30,51 @@
             <div class="progress-value"></div>
         </div>
 
+        <div class="message-modal">
+            <div class="emoji-bar">
+                <a href="#" class="emoji">😄</a>
+                <a href="#" class="emoji">🥰</a>
+                <a href="#" class="emoji">🥳</a>
+                <a href="#" class="emoji">🙃</a>
+                <a href="#" class="emoji">😂</a>
+                <a href="#" class="emoji">😁</a>
+                <a href="#" class="emoji">🤣</a>
+                <a href="#" class="emoji">😝</a>
+                <a href="#" class="emoji">🤓</a>
+                <a href="#" class="emoji">🤨</a>
+                <a href="#" class="emoji">🤬</a>
+                <a href="#" class="emoji">😤</a>
+                <a href="#" class="emoji">🙄</a>
+                <a href="#" class="emoji">😈</a>
+                <a href="#" class="emoji">🤑</a>
+            </div>
+            <div class="messages">
+                <a href="#" class="message">You, tough guy, stop Playing!</a>
+                <a href="#" class="message">Asshole, You’re breaking the law!</a>
+                <a href="#" class="message">You have your last chance!</a>
+                <a href="#" class="message">Come on wise guy, give it a shot.</a>
+                <a href="#" class="message">Hope for your sake that I don't succeed!</a>
+                <a href="#" class="message">Don't make me angry!</a>
+                <a href="#" class="message">You're going nowhere</a>
+                <a href="#" class="message">My play will definitely "loosen" you up.</a>
+                <a href="#" class="message">You’re screwed, pal!</a>
+                <a href="#" class="message">Welcome to the shitstorm, pal.</a>
+                <a href="#" class="message">Okay, we're done. Calm down now.</a>
+                <a href="#" class="message">I give up! Relax, relax.</a>
+                <a href="#" class="message">That’s the best you got?</a>
+                <a href="#" class="message">Your time is up, man. Mine? it's only just begun.</a>
+                <a href="#" class="message">You thought you were going to be lucky this time, didn't you?</a>
+            </div>
+        </div>
+
     </div>
 </body>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
     <script>
+
+        /* code for slider */
         function getQueryVariable(variable) {
             var query = window.location.search.substring(1);
             var vars = query.split('&');
@@ -60,11 +103,11 @@
             $(`#${id}`).addClass("activebox");
             glow = () => {};
         }
+
         function stopglow()
         {
             $(".floating-box").addClass("faded");
             $(".floating-box").removeClass("animatebox");
-
         }
 
         $("#stone").click(function() {
@@ -82,13 +125,13 @@
         $("#diamond").click(function() {
             glow('diamond');
         });
+
         function reglow()
         {
             $(".floating-box").removeClass("faded");
             $(".floating-box").removeClass("activebox");
             $(".floating-box").addClass("animatebox");
         }
-
 
         function interv () {
             glow = (id) =>{
@@ -104,5 +147,6 @@
         $(function () {
             setInterval(interv, 15000);
         });
+
     </script>
 </html> 

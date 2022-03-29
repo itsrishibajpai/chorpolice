@@ -457,15 +457,60 @@ body {
     animation: 1.5s linear both infinite saturate;
     transition: 0.6s ease;
 }
-
-#stone::after {
-    content: url('images/Boxes/Diamond.png');
+.message-modal {
+    width: 260px;
+    height: 400px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 15px;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 40px;
+    left: 40px;
 }
-
-
+.emoji-bar {
+    padding: 10px;
+    background: #111;
+    border-radius: 10px;
+    overflow-x: scroll;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #222;
+}
+.emoji-bar .emoji {
+    text-decoration: none;
+    font-size: 28px;
+    margin-left: 10px;
+}
+.emoji-bar .emoji:nth-child(1) {
+    margin-left: 5px;
+}
+.emoji-bar .emoji:hover {
+    transform: scale(1.8);
+    transition: 0.6s ease;
+}
+.messages {
+    margin-top: 20px;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    background: #111;
+    border-radius: 10px;
+}
+.message {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #a3ce72;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 24px;
+}
+.message:hover {
+    font-weight: 700;
+    transition: 0.8s ease;
+}
 
 /* ========== Animation CSS =========== */
 
