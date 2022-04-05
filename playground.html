@@ -13,7 +13,51 @@
     <div id="game-canvas">
 
         <div id="topbar">
-            <img src="images/Icons/Top Bar Gameplay.png" alt="">
+            <div class="flex-console" id="chor-side">
+                <a href="#" class="chat" id="chor-chat">
+                    <img src="images/Icons/chatblue.png" class="chaticon"/>
+                </a>
+                <div id="heart">
+                    <span class="lifecount" id="chorlife">2</span>
+                </div>
+                <div class="console">
+                    <div class="score-bar">
+                        <span class="title">CHORR</span>
+                        <span class="score">4</span>
+                    </div>
+                    <div class="box">
+                        <div id="top" class="top borderanimate"></div>
+                        <div id="bottom" class="bottom borderanimate"></div>
+                        <div id="left" class="left borderanimate"></div>
+                        <div id="right" class="right borderanimate"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coins-counter">
+                <span id="coin-count">1120</span>
+            </div>
+
+            <div class="flex-console" id="police-side">
+                <div class="console">
+                    <div class="box">
+                        <div id="top" class="top borderanimate"></div>
+                        <div id="bottom" class="bottom borderanimate"></div>
+                        <div id="left" class="left borderanimate"></div>
+                        <div id="right" class="right borderanimate"></div>
+                    </div>
+                    <div class="score-bar">
+                        <span class="title">POLICE</span>
+                        <span class="score">4</span>
+                    </div>
+                </div>
+                <div id="heart">
+                    <span class="lifecount" id="policelife">2</span>
+                </div>
+                <a href="#" class="chat" id="police-chat">
+                    <img src="images/Icons/chatblue.png" class="chaticon"/>
+                </a> 
+            </div>   
         </div>
 
         <div id="boxes">
@@ -30,7 +74,7 @@
             <div class="progress-value"></div>
         </div>
 
-        <div class="message-modal">
+        <div class="message-modal modal-right">
             <div class="emoji-bar">
                 <a href="#" class="emoji">😄</a>
                 <a href="#" class="emoji">🥰</a>
@@ -70,83 +114,96 @@
     </div>
 </body>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
-    <script>
+<script>
 
-        /* code for slider */
-        function getQueryVariable(variable) {
-            var query = window.location.search.substring(1);
-            var vars = query.split('&');
-            for (var i = 0; i < vars.length; i++) {
-                var pair = vars[i].split('=');
-                if (decodeURIComponent(pair[0]) == variable) {
-                    return decodeURIComponent(pair[1]);
-                }
+    /* code for slider */
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+                return decodeURIComponent(pair[1]);
             }
-            console.log('Query variable %s not found', variable);
         }
+        console.log('Query variable %s not found', variable);
+    }
 
-        var path = 'images/Backgrounds/';
-        var filename = getQueryVariable('filename');
-        var url = path+filename;
-        var canvas = document.getElementById('game-canvas');
-        canvas.style.backgroundImage = `url(${url})`;
+    var path = 'images/Backgrounds/';
+    var filename = getQueryVariable('filename');
+    var url = path+filename;
+    var canvas = document.getElementById('game-canvas');
+    canvas.style.backgroundImage = `url(${url})`;
 
-        var box = document.querySelectorAll('floating-box');
+    var box = document.querySelectorAll('floating-box');
 
-        function glow(id)
-        {
+    function glow(id)
+    {
+        $(".floating-box").addClass("faded");
+        $(".floating-box").removeClass("animatebox");
+        $(`#${id}`).removeClass("faded");
+        $(`#${id}`).addClass("activebox");
+        glow = () => {};
+    }
+
+    function stopglow()
+    {
+        $(".floating-box").addClass("faded");
+        $(".floating-box").removeClass("animatebox");
+    }
+
+    $("#stone").click(function() {
+        glow('stone');
+    });
+    $("#silver").click(function() {
+        glow('silver');
+    });
+    $("#gold").click(function() {
+        glow('gold');
+    });
+    $("#platinum").click(function() {
+        glow('platinum');
+    });
+    $("#diamond").click(function() {
+        glow('diamond');
+    });
+
+    function reglow()
+    {
+        $(".floating-box").removeClass("faded");
+        $(".floating-box").removeClass("activebox");
+        $(".floating-box").addClass("animatebox");
+    }
+
+    function interv () {
+        glow = (id) =>{
             $(".floating-box").addClass("faded");
             $(".floating-box").removeClass("animatebox");
             $(`#${id}`).removeClass("faded");
             $(`#${id}`).addClass("activebox");
             glow = () => {};
-        }
+        };
+        reglow();
+    }
 
-        function stopglow()
-        {
-            $(".floating-box").addClass("faded");
-            $(".floating-box").removeClass("animatebox");
-        }
+    $('#chor-chat').click(function () {
+        $('.message-modal').removeClass('modal-right');
+        $('.message-modal').addClass('modal-left');
+    });
+    $('#police-chat').click(function () {
+        $('.message-modal').removeClass('modal-left');
+        $('.message-modal').addClass('modal-right');
+    });
 
-        $("#stone").click(function() {
-            glow('stone');
-        });
-        $("#silver").click(function() {
-            glow('silver');
-        });
-        $("#gold").click(function() {
-            glow('gold');
-        });
-        $("#platinum").click(function() {
-            glow('platinum');
-        });
-        $("#diamond").click(function() {
-            glow('diamond');
-        });
+    $(function () {
+        setInterval(interv, 15000);
+    });
 
-        function reglow()
-        {
-            $(".floating-box").removeClass("faded");
-            $(".floating-box").removeClass("activebox");
-            $(".floating-box").addClass("animatebox");
-        }
+    function chorTimer() {
+        
+    }
 
-        function interv () {
-            glow = (id) =>{
-                $(".floating-box").addClass("faded");
-                $(".floating-box").removeClass("animatebox");
-                $(`#${id}`).removeClass("faded");
-                $(`#${id}`).addClass("activebox");
-                glow = () => {};
-            };
-            reglow();
-        }
-
-        $(function () {
-            setInterval(interv, 15000);
-        });
-
-    </script>
+</script>
 </html> 
