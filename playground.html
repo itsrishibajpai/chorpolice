@@ -26,10 +26,10 @@
                         <span class="score">4</span>
                     </div>
                     <div class="box">
-                        <div id="top" class="top borderanimate"></div>
-                        <div id="bottom" class="bottom borderanimate"></div>
-                        <div id="left" class="left borderanimate"></div>
-                        <div id="right" class="right borderanimate"></div>
+                        <div id="chor-top" class="top-border"></div>
+                        <div id="chor-bottom" class="bottom-border"></div>
+                        <div id="chor-left" class="left"></div>
+                        <div id="chor-right" class="right"></div>
                     </div>
                 </div>
             </div>
@@ -41,10 +41,10 @@
             <div class="flex-console" id="police-side">
                 <div class="console">
                     <div class="box">
-                        <div id="top" class="top borderanimate"></div>
-                        <div id="bottom" class="bottom borderanimate"></div>
-                        <div id="left" class="left borderanimate"></div>
-                        <div id="right" class="right borderanimate"></div>
+                        <div id="police-top" class="top-border"></div>
+                        <div id="police-bottom" class="bottom-border"></div>
+                        <div id="police-left" class="left"></div>
+                        <div id="police-right" class="right"></div>
                     </div>
                     <div class="score-bar">
                         <span class="title">POLICE</span>
@@ -74,7 +74,7 @@
             <div class="progress-value"></div>
         </div>
 
-        <div class="message-modal modal-right">
+        <div class="message-modal">
             <div class="emoji-bar">
                 <a href="#" class="emoji">😄</a>
                 <a href="#" class="emoji">🥰</a>
@@ -190,20 +190,39 @@
 
     $('#chor-chat').click(function () {
         $('.message-modal').removeClass('modal-right');
-        $('.message-modal').addClass('modal-left');
+        $('.message-modal').toggleClass('modal-left');
     });
     $('#police-chat').click(function () {
         $('.message-modal').removeClass('modal-left');
-        $('.message-modal').addClass('modal-right');
+        $('.message-modal').toggleClass('modal-right');
     });
+    
 
     $(function () {
         setInterval(interv, 15000);
     });
 
-    function chorTimer() {
-        
+    function addChorTimer() {
+        $('#chor-top').addClass('borderanimate');
+        $('#chor-bottom').addClass('borderanimate');
+        $('#chor-left').addClass('borderanimate');
+        $('#chor-right').addClass('borderanimate');
     }
+
+    $(function () {
+        setInterval(addChorTimer, 0);
+    });
+
+    function addPoliceTimer() {
+        $('#police-top').addClass('borderanimate');
+        $('#police-bottom').addClass('borderanimate');
+        $('#police-left').addClass('borderanimate');
+        $('#police-right').addClass('borderanimate');
+    }
+
+    $(function () {
+        setInterval(addPolicexsTimer, 15000);
+    });
 
 </script>
 </html> 
