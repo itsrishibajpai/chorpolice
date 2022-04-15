@@ -11,6 +11,9 @@ body {
     height: 100vh;
     max-width: 100vw;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .home-canvas::before {
     content: "";
@@ -62,6 +65,13 @@ body {
     transform: scale(1.08);
     box-shadow: 6px 6px 10px #161616;
     transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mobilefreeze {
+    background-color: #000;
+    background: url(images/Backgrounds/home.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* places page */
@@ -941,3 +951,74 @@ body {
         transform: scale(0.8);
     }
 }
+
+
+/* Media Queries */
+@media screen and (max-width: 1380px) {
+
+}
+@media screen and (max-width: 1200px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 20%;
+        top: -30px;
+    }
+    .home-canvas .bottom a > img {
+        width: 150px;
+        top: -50px;
+        left: 15px;
+    }
+    .home-canvas .top a > img {
+        width: 40px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    .home-canvas .bottom a > img {
+        width: 150px;
+        top: -60px;
+    }
+    .home-canvas .bottom .characters {
+        width: 40vw;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home-canvas .bottom .characters {
+        width: 36vw;
+        left: 20px;
+    }
+    .logo {
+        width: 15%;
+        top: -30px;
+    }
+    .home-canvas .top a > img {
+        width: 40px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    .home-canvas .bottom a > img {
+        width: 140px;
+        top: -45px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 475px) {
+    
+}
+
+@media screen and (max-width: 420px) {
+    
+}
+
+@media screen and (max-width: 360px) {
+    
+}
+
