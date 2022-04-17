@@ -1007,7 +1007,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    
+    .mobile-view {
+        
+    }
 }
 
 @media screen and (max-width: 475px) {
@@ -1021,4 +1023,37 @@ body {
 @media screen and (max-width: 360px) {
     
 }
+
+@media screen and (orientation: landscape) {
+    #mobile-view {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (orientation: portrait) { 
+    .canvas {
+        display: none;
+        visibility: hidden;
+    }
+    #mobile-view {
+        height: 100vh;
+        background: url(images/Backgrounds/home.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .notice {
+        display: block;
+        padding: 40px 20px;
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
 
