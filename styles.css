@@ -142,6 +142,11 @@ body {
 .item .place-link {
     pointer-events: none;
 }
+
+.slidewrapper {
+    margin-top: -60px;
+}
+
 .slider {
     position: relative;
     z-index: 200;
@@ -1084,7 +1089,7 @@ body {
         margin: 20px 10px;
     }
     .bottomnav {
-        margin-top: -40px;
+        margin-top: -60px;
     }
 }
 
