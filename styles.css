@@ -1343,6 +1343,16 @@ body {
         width: 12px;
         top: 18px;
     }
+    .message-modal {
+        width: 260px;
+        height: 260px;
+        padding: 20px;
+        top: 25px;
+        z-index: 1000;
+    }
+    .messages {
+        height: 160px;
+    }
 }
 
 @media screen and (orientation: landscape) and (max-height: 360px) {
