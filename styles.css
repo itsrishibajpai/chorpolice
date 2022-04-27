@@ -1090,7 +1090,7 @@ body {
 
 @media screen and (max-width: 900px) {
     .top {
-        margin-top: 2rem;
+        margin-top: 0;
     }
     .home-canvas .bottom .characters {
         width: 36vw;
@@ -1099,6 +1099,15 @@ body {
     .logo {
         width: 20%;
         top: 0px;
+    }
+    .mainlogo {
+        top: -40px;
+    }
+    .home-canvas .top a > img {
+        width: 60px;
+        margin-top: -20px;
+        margin-left: 20px;
+        z-index: 100;
     }
     .levels .logo {
         width: 20%;
@@ -1161,7 +1170,7 @@ body {
         position: relative;
         width: 40px;
         height: 32px;
-        margin-top: 15px;
+        margin: 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1185,7 +1194,7 @@ body {
         height: 80px;
     }
     .score-bar {
-        width: 150px;
+        width: 120px;
         padding: 8px 15px;
         display: flex;
         align-items: flex-start;
@@ -1234,11 +1243,86 @@ body {
     .progress-value {
         height: 15px;
     }
+    .info-button {
+        margin-top: -30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .mobile-view {
         margin: 2rem auto;
+    }
+    .home-canvas .top a > img {
+        width: 40px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    .logo.mainlogo {
+        top: -45px;
+        width: 20%;
+    }
+    .chaticon {
+        width: 20px;
+        margin: 5px;
+    }
+    #heart {
+        margin: 0px 5px;
+        width: 32px;
+        height: 28px;
+    }
+    .home-canvas .bottom .characters {
+        width: 40vw;
+        left: 20px;
+        position: relative;
+    }
+    .lifecount {
+        font-size: 9px;
+    }
+    .box {
+        width: 60px;
+        height: 70px;
+    }
+    .score-bar {
+        width: 120px;
+        padding: 3px 5px;
+        margin-left: 10px;
+        border-radius: 30px 0px 0px 30px;
+    }
+    .score-bar .title {
+        font-size: 0.5rem;
+        margin: 0px 6px;
+    }
+    .score {
+        display: block;
+        color: #fff;
+        margin: 2px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+        line-height: 1.3rem;
+    }
+    #police-side .console .score-bar {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    .floating-box {
+        width: 110px;
+    }
+    #boxes {
+        padding: 1.5rem 0;
+    }
+    .coins-counter {
+        position: relative;
+        display: block;
+        height: 50px;
+        width: 60px;
+        border-radius: 10px;
+        top: 10px;
+    }
+    #coin-count {
+        margin-top: 34px;
+        font-size: 0.6rem;
+        font-weight: normal;
     }
 }
 
