@@ -1155,7 +1155,7 @@ body {
     }
     .chaticon {
         width: 24px;
-        margin: 20px;
+        margin: 20px 5px;
     }
     #heart {
         position: relative;
@@ -1185,8 +1185,8 @@ body {
         height: 80px;
     }
     .score-bar {
-        width: 110px;
-        padding: 15px 20px;
+        width: 150px;
+        padding: 8px 15px;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -1201,7 +1201,7 @@ body {
         margin-right: 20px;
     }
     .score-bar .title {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         font-weight: 400;
         color: #fff;
         font-family: 'Montserrat', sans-serif;
