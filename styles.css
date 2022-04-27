@@ -189,12 +189,12 @@ body {
 }
 
 .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
-    transform: scale(0.7)  translate(-640px);
+    transform: scale(0.7)  translate(-600px);
     z-index: 5;
 }
 
 .item.slick-slide.slick-active {
-    transform: scale(0.8) translate(250px);
+    transform: scale(0.8) translate(230px);
     box-shadow: -10px 10px 20px #000;
 }
 
@@ -958,7 +958,10 @@ body {
 
 }
 @media screen and (max-width: 1200px) {
-    
+    .chaticon {
+        width: 30px;
+        margin: 20px 30px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -984,16 +987,44 @@ body {
         width: 40vw;
         left: 20px;
     }
+    .icons {
+        height: 56px;
+        filter: contrast(150%);
+    }
+    #profile {
+        font-size: 16px;
+        top: 40px;
+        left: 80px;
+    }
+    .image-navigation #coins {
+        font-size: 12px;
+        top: -25px;
+        left: 20px;
+    }
+    .slider {
+        margin: 2rem auto1;
+    }
+    .item.slick-slide {
+        transform: scale(0.7) translate(585px);
+    }
 }
 
 @media screen and (max-width: 900px) {
+    .top {
+        margin-top: 2rem;
+    }
     .home-canvas .bottom .characters {
         width: 36vw;
         left: 20px;
     }
     .logo {
-        width: 15%;
-        top: -30px;
+        width: 20%;
+        top: 0px;
+    }
+    .levels .logo {
+        width: 20%;
+        top: 0px;
+        margin-top: -40px;
     }
     .home-canvas .top a > img {
         width: 40px;
@@ -1002,18 +1033,57 @@ body {
     }
     .home-canvas .bottom a > img {
         width: 140px;
-        top: -45px;
+        top: -50px;
+    }
+    .icons {
+        height: 42px;
+    }
+    #profile {
+        font-size: 12px;
+        top: 35px;
+        left: 70px;
+    }
+    .image-navigation #coins {
+        font-size: 10px;
+        top: -24px;
+        left: 14px;
+        letter-spacing: 1px;
+    }
+    .slider {
+        margin-top: -1rem;
+        margin-bottom: 0rem;
+    }
+    .item.slick-slide {
+        width: 320px;
+        height: 208px ;
+        background: transparent;
+        border-radius: 44px;
+        transition: transform .4s;
+        position: relative; 
+    }
+    .bottomnav {
+        padding-top: 0px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .mobile-view {
-        
+        margin: 2rem auto;
     }
 }
 
 @media screen and (max-width: 475px) {
-    
+    .slider {
+        margin-top: 1rem;
+    }
+    .item.slick-slide {
+        width: 320px;
+        height: 208px ;
+        background: transparent;
+        border-radius: 44px;
+        transition: transform .4s;
+        position: relative; 
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -1022,6 +1092,24 @@ body {
 
 @media screen and (max-width: 360px) {
     
+}
+
+@media screen and (orientation: landscape) and (max-height: 380px) {
+    .slider {
+        margin-top: -2rem;
+        margin-bottom: 0rem;
+    }
+    .item.slick-slide {
+        width: 270px;
+        height: 176px ;
+        background: transparent;
+        border-radius: 28px;
+        transition: transform .4s;
+        position: relative; 
+    }
+    .bottomnav {
+        padding-top: 0px;
+    }
 }
 
 @media screen and (orientation: landscape) {
@@ -1033,6 +1121,10 @@ body {
 
 @media screen and (orientation: portrait) { 
     .canvas {
+        display: none;
+        visibility: hidden;
+    }
+    #game-canvas {
         display: none;
         visibility: hidden;
     }

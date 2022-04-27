@@ -19,7 +19,7 @@
                     <a href="#" id="profile">UserName</a>
                 </a>
             </div>
-            <div id="logo">
+            <div id="logo levels">
                 <img src="images/Logo/Logo.png" class="logo" alt="logo">
             </div>
             <div class="store">
@@ -51,6 +51,10 @@
                     <img src="images/Levels/Kings_Palace.png" alt="" onclick="window.open('palace.html')">
                 </a>
 
+                <a href="bank.html" class="item">
+                    <img src="images/Levels/Bank_Treasury.png" alt="" onclick="window.open('bank.html')">
+                </a>
+
             </div>
         </div>
         <div class="bottomnav">
@@ -78,7 +82,7 @@
     <script>
         
         $('.slider').slick({
-            slidesToShow: 3,
+            slidesToShow: 4,
             slidesToScroll: 1,
             arrows: true,
             dots: false,
@@ -88,20 +92,20 @@
             focusOnSelect: true,
             cssEase: 'linear',
             touchMove: true,
-            autoplay: true,
-            autoplaySpeed: 1000,
+            autoplay: false,
+            autoplaySpeed: 1500,
             prevArrow:'<button class="slick-prev"> <img src="images/Icons/prevbutton.png" alt=""> </button>',
             nextArrow:'<button class="slick-next"> <img src="images/Icons/nextbutton.png" alt=""> </button>',
             
-            //         responsive: [                        
-            //             {
-            //               breakpoint: 576,
-            //               settings: {
-            //                 centerMode: false,
-            //                 variableWidth: false,
-            //               }
-            //             },
-            //         ]
+            responsive: [                        
+                {
+                breakpoint: 576,
+                    settings: {
+                        centerMode: false,
+                        variableWidth: false,
+                    }
+                },
+            ]
             });
 
             var imgs = $('.slider img');
