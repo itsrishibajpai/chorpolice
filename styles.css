@@ -659,6 +659,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
+.wicket {
+    display: block;
+    color: #fff;
+    margin: 2px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
 
 /* Border filling Animation CSS */
 
