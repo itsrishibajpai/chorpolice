@@ -13,7 +13,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .home-canvas::before {
     content: "";
@@ -28,8 +28,9 @@ body {
     z-index: -1;
 }
 .home-canvas .top a > img {
+    position: absolute;
     width: 60px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 30px;
     z-index: 100;
 }
@@ -38,7 +39,7 @@ body {
     width: 25%;
     margin: 0px auto;
     position: relative;
-    top: -50px;
+    top: 30px;
     left: 20px;
 }
 .home-canvas .bottom .characters {
@@ -133,6 +134,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px;
+    margin-bottom: 1rem;
     z-index: 400;
 }
 .bottomnav a {
@@ -194,7 +196,7 @@ body {
 }
 
 .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
-    transform: scale(0.7)  translate(-600px);
+    transform: scale(0.7)  translate(-660px);
     z-index: 5;
 }
 
@@ -660,7 +662,7 @@ body {
 .score {
     display: block;
     color: #fff;
-    margin: 2px 15px;
+    margin: 2px 5px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -1105,9 +1107,6 @@ body {
         width: 20%;
         top: 0px;
     }
-    .mainlogo {
-        top: -40px;
-    }
     .home-canvas .top a > img {
         width: 60px;
         margin-top: -20px;
@@ -1259,13 +1258,13 @@ body {
     }
     .home-canvas .top a > img {
         width: 40px;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 15px;
     }
-    .logo.mainlogo {
+    /* .logo {
         top: -45px;
         width: 20%;
-    }
+    } */
     .chaticon {
         width: 20px;
         margin: 5px;
@@ -1354,6 +1353,10 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-height: 400px) {
+    .home-canvas .top a > img {
+        width: 40px;
+        margin-top: 30px;
+    }
     .slider {
         margin-top: -2rem;
         margin-bottom: 0rem;
@@ -1365,6 +1368,12 @@ body {
         border-radius: 28px;
         transition: transform .4s;
         position: relative;
+    }
+    .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .bottomnav {
         padding-top: 0px;
@@ -1452,6 +1461,28 @@ body {
 }
 
 @media screen and (orientation: landscape) and (max-height: 360px) {
+    .home-canvas .bottom .characters {
+        width: 30vw;
+        left: 20px;
+    }
+    .logo {
+        width: 20%;
+        top: 0px;
+    }
+    .mainlogo {
+        top: -40px;
+        width: 14%;
+    }
+    .home-canvas .top a > img {
+        position: absolute;
+        width: 36px;
+        margin-top: 15px;
+        margin-left: 15px;
+        z-index: 100;
+    }
+    .logo {
+        margin-top: 60px;
+    }
     .slider {
         margin-top: -2rem;
         margin-bottom: 0rem;
