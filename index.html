@@ -7,7 +7,7 @@
     <meta name="author" content="Rishi Bajpai">
     <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <title>TWM - Chor Police</title>
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
@@ -20,8 +20,8 @@
             <img src="images/Logo/Logo.png" class="logo mainlogo" alt="">
         </div>
         <div class="bottom">
-            <img src="images/Characters/Homepage_chracters.png" alt="" class="characters">
-            <a href="places.html"><img src="images/Icons/Play Now.png" alt=""></a>
+            <img src="images/Characters/Homepage_chracters.png" alt="" class="characters" data-aos="zoom-in">
+            <a href="places.html"><img src="images/Icons/Play Now.png" alt=""  data-aos="zoom-in"></a>
         </div>
     </div>
     <div id="mobile-view">
@@ -29,5 +29,19 @@
             <h2>Rotate your phone to Landscape Mode.</h2>
         </div>
     </div>
+
+    <audio controls autoplay>
+        <source src="/sounds/opening-sound.wav" type="audio/wav">
+        <source src="/sounds/opening-sound.mp3" type="audio/mp3">
+        <source src="/sounds/opening-sound.m4a" type="audio/m4a">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>

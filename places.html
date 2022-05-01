@@ -35,23 +35,23 @@
         <div class="slidewrapper">
             <div class="slider">
 
-                <a href="bank.html" class="item">
+                <a href="bank.html" class="item" onclick="playSound()">
                     <img src="images/Levels/Bank_Treasury.png" alt="" onclick="window.open('bank.html')">
                 </a>
 
-                <a href="temple.html" class="item">
+                <a href="temple.html" class="item" onclick="playSound()">
                     <img src="images/Levels/Golden_Temple.png" alt="" onclick="window.open('temple.html')">
                 </a>
 
-                <a href="meuseum.html" class="item">
+                <a href="meuseum.html" class="item" onclick="playSound()">
                     <img src="images/Levels/Art_Mesuem.png" alt="" onclick="window.open('museum.html')">
                 </a>
 
-                <a href="palace.html" class="item">
+                <a href="palace.html" class="item" onclick="playSound()">
                     <img src="images/Levels/Kings_Palace.png" alt="" onclick="window.open('palace.html')">
                 </a>
 
-                <a href="bank.html" class="item">
+                <a href="bank.html" class="item" onclick="playSound()">
                     <img src="images/Levels/Bank_Treasury.png" alt="" onclick="window.open('bank.html')">
                 </a>
 
@@ -76,10 +76,22 @@
         </div>
     </div>
 
+    <audio controls id="audioSource">
+        <source src="/sounds/level-select.wav" type="audio/wav">
+        <source src="/sounds/level-select.mp3" type="audio/mp3">
+        <source src="/sounds/level-select.m4a" type="audio/m4a">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
+
+        //code to play the sound
+        function playSound () {
+            document.getElementById("audioSource").play();
+        }
         
         $('.slider').slick({
             slidesToShow: 4,

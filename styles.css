@@ -356,7 +356,7 @@ body {
     top: 12px;
     right: 40px;
     text-align: left;
-    animation: 0.15s linear 14 spinRightCoin;
+    animation: 0.15s linear 4 spinRightCoin;
     animation-delay: 1s;
 }
 #player1 .coins .coin-single:nth-child(2) {
@@ -393,7 +393,7 @@ body {
     top: 12px;
     left: 40px;
     text-align: left;
-    animation: 0.15s linear 14 spinLeftCoin;
+    animation: 0.15s linear 4 spinLeftCoin;
     animation-delay: 1s;
 }
 
@@ -570,7 +570,7 @@ body {
 }
 #topbar {
     height: 130px;
-    padding: 15px 60px;
+    padding: 15px 30px;
     background: linear-gradient(to right, rgba(34, 34, 34, 0.85), rgba(153, 153, 153, 0.9), rgba(34, 34, 34, 0.85));
     border-radius: 0px 0px 40px 40px;
     display: flex;
@@ -590,28 +590,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/* #heart::before, #heart::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 24px;
-    height: 40px;
-    border-radius: 50px 50px 0 0;
-    background: red;
-}
-
-#heart::before {
-    left: 24px;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-
-#heart::after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-} */
 
 .lifecount {
     color: #fff;
@@ -994,9 +972,41 @@ body {
 
 }
 @media screen and (max-width: 1200px) {
+    #topbar {
+        padding: 15px 25px;
+    }
     .chaticon {
         width: 30px;
-        margin: 20px 30px;
+        margin: 20px;
+    }
+    .console {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .coins-counter {
+        margin: 10px 15px;
+    }
+    .score-bar {
+        width: 200px;
+        margin-left: 20px;
+        padding: 16px 20px;
+    }
+    #police-side .console .score-bar {
+        margin-right: 20px;
+    }
+    .score-bar .title {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .floating-box {
+        width: 180px;
+    }
+    .score {
+        margin: 0px 2px;
+    }
+    #coin-count{
+        left: 15px;
     }
 }
 

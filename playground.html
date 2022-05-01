@@ -73,12 +73,12 @@
 
         <div id="boxes">
             <a href="#" id="stonebox">
-                <img src="images/Boxes/Stone Box.png" alt="box" id="stone" class="floating-box animatebox">
+                <img src="images/Boxes/Stone Box.png" alt="box" id="stone" class="floating-box animatebox" onclick="playSound()">
             </a>
-            <img src="images/Boxes/Silver.png" alt="box" id="silver" class="floating-box animatebox">
-            <img src="images/Boxes/Gold.png" alt="box" id="gold" class="floating-box animatebox">
-            <img src="images/Boxes/Platinum.png" alt="box" id="platinum" class="floating-box animatebox">
-            <img src="images/Boxes/Diamond.png" alt="box" id="diamond" class="floating-box animatebox">
+            <img src="images/Boxes/Silver.png" alt="box" id="silver" class="floating-box animatebox" onclick="playSound()">
+            <img src="images/Boxes/Gold.png" alt="box" id="gold" class="floating-box animatebox" onclick="playSound()">
+            <img src="images/Boxes/Platinum.png" alt="box" id="platinum" class="floating-box animatebox" onclick="playSound()">
+            <img src="images/Boxes/Diamond.png" alt="box" id="diamond" class="floating-box animatebox" onclick="playSound()">
         </div>
 
         <div class="progress">
@@ -128,11 +128,23 @@
             <h2>Rotate your phone to Landscape Mode.</h2>
         </div>
     </div>
+
+    <audio controls id="audioSource">
+        <source src="/sounds/box-select.wav" type="audio/wav">
+        <source src="/sounds/box-select.mp3" type="audio/mp3">
+        <source src="/sounds/box-select.m4a" type="audio/m4a">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
 <script>
+
+    //code to play the sound
+    function playSound () {
+        document.getElementById("audioSource").play();
+    }
 
     /* code for slider */
     function getQueryVariable(variable) {
