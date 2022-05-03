@@ -140,7 +140,7 @@ audio {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     z-index: 400;
 }
 .bottomnav a {

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body{
             overflow-x: hidden;
@@ -73,12 +74,12 @@
 
         <div id="boxes">
             <a href="#" id="stonebox">
-                <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" class="floating-box animatebox">
+                <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" class="floating-box animatebox" data-aos="zoom-in">
             </a>
-            <img src="images/Boxes/Silver.webp" alt="box" id="silver" class="floating-box animatebox">
-            <img src="images/Boxes/Gold.webp" alt="box" id="gold" class="floating-box animatebox">
-            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" class="floating-box animatebox">
-            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" class="floating-box animatebox">
+            <img src="images/Boxes/Silver.webp" alt="box" id="silver" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Gold.webp" alt="box" id="gold" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" class="floating-box animatebox" data-aos="zoom-in">
         </div>
 
         <div class="progress">
@@ -136,6 +137,12 @@
         Your browser does not support the audio element.
     </audio>
 </body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
 
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 
