@@ -22,7 +22,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    background: url(images/Backgrounds/home.png);
+    background: url(images/Backgrounds/home.webp);
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -70,7 +70,7 @@ body {
 
 .mobilefreeze {
     background-color: #000;
-    background: url(images/Backgrounds/home.png);
+    background: url(images/Backgrounds/home.webp);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -134,7 +134,7 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     padding: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     z-index: 400;
 }
 .bottomnav a {
@@ -235,7 +235,7 @@ body {
 
 
 .bank {
-    background: url('images/Backgrounds/bankbg.png');
+    background: url('images/Backgrounds/bankbg.webp');
     background-position: center;
     background-size: cover;
 
@@ -324,19 +324,19 @@ body {
 
 
 .meuseum {
-    background: url('images/Backgrounds/artmeuseum.png');
+    background: url('images/Backgrounds/artmeuseum.webp');
     background-position: center;
     background-size: cover;
 }
 
 .temple {
-    background: url('images/Backgrounds/temple.png');
+    background: url('images/Backgrounds/temple.webp');
     background-position: center;
     background-size: cover;
 }
 
 .palace {
-    background: url('images/Backgrounds/palace.png');
+    background: url('images/Backgrounds/palace.webp');
     background-position: center;
     background-size: cover;
 }
@@ -348,7 +348,7 @@ body {
 }
 
 #player1 .coins .coin-single {
-    content: url('images/Icons/twmcoin.png');
+    content: url('images/Icons/twmcoin.webp');
     width: 22px;
     position: absolute;
     margin-top: auto;
@@ -385,7 +385,7 @@ body {
 }
 
 #player2 .coins .coin-single {
-    content: url('images/Icons/twmcoin.png');
+    content: url('images/Icons/twmcoin.webp');
     width: 22px;
     margin-top: auto;
     position: absolute;
@@ -585,7 +585,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://img.icons8.com/emoji/48/000000/heart-suit.png');
+    background: url('https://img.icons8.com/emoji/48/000000/heart-suit.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -661,7 +661,7 @@ body {
   margin: 0 auto;
   border: 3px solid transparent;
   background: #000;
-  background: url('images/Icons/Home Profile Picture.png');
+  background: url('images/Icons/Home Profile Picture.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -818,7 +818,7 @@ body {
     display: block;
     height: 70px;
     width: 90px;
-    background: url('images/Icons/Homepage_CoinsDisplay.png');
+    background: url('images/Icons/Homepage_CoinsDisplay.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1188,7 +1188,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: url('https://img.icons8.com/emoji/48/000000/heart-suit.png');
+        background: url('https://img.icons8.com/emoji/48/000000/heart-suit.webp');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1531,7 +1531,7 @@ body {
     }
     #mobile-view {
         height: 100vh;
-        background: url(images/Backgrounds/home.png);
+        background: url(images/Backgrounds/home.webp);
         background-size: cover;
         background-position: center;
         display: flex;
