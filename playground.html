@@ -73,12 +73,12 @@
 
         <div id="boxes">
             <a href="#" id="stonebox">
-                <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" class="floating-box animatebox" onclick="playSound()">
+                <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" class="floating-box animatebox">
             </a>
-            <img src="images/Boxes/Silver.webp" alt="box" id="silver" class="floating-box animatebox" onclick="playSound()">
-            <img src="images/Boxes/Gold.webp" alt="box" id="gold" class="floating-box animatebox" onclick="playSound()">
-            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" class="floating-box animatebox" onclick="playSound()">
-            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" class="floating-box animatebox" onclick="playSound()">
+            <img src="images/Boxes/Silver.webp" alt="box" id="silver" class="floating-box animatebox">
+            <img src="images/Boxes/Gold.webp" alt="box" id="gold" class="floating-box animatebox">
+            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" class="floating-box animatebox">
+            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" class="floating-box animatebox">
         </div>
 
         <div class="progress">
@@ -173,6 +173,7 @@
         $(".floating-box").removeClass("animatebox");
         $(`#${id}`).removeClass("faded");
         $(`#${id}`).addClass("activebox");
+        playSound();
         glow = () => {};
     }
 
@@ -211,6 +212,7 @@
             $(".floating-box").removeClass("animatebox");
             $(`#${id}`).removeClass("faded");
             $(`#${id}`).addClass("activebox");
+            playSound();
             glow = () => {};
         };
         reglow();
