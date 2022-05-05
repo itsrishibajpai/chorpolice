@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rishi Bajpai">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+    <title>TWM - Chor Police</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+        #vignette {
+            position: absolute;
+            background: #fff;
+            padding: 5%;
+            z-index: 10;
+            top: 5%;
+            left: 40%;
+        }
+        .canvas {
+            position: relative;
+            z-index: -10;
+        }
+        .blur {
+            filter: blur(10px);
+        }
+    </style>
+</head>
+<body>
+    <div class="button" id="vignette">
+        <button onclick="trigger()">CLick for fullscreen</button>
+    </div>
+    <div class="canvas home-canvas " id="canvas">
+        <h1 id="value"></h1>
+        <div class="top">
+            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+        </div>
+        <div class="middle">
+            <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
+        </div>
+        <div class="bottom">
+            <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
+            <a href="places.html" onclick="playSound()"><img src="images/Icons/Play Now.webp" alt=""></a>
+        </div>
+    </div>
+    <div id="mobile-view">
+        <div class="notice">
+            <h2>Rotate your phone to Landscape Mode.</h2>
+        </div>
+    </div>
+
+    <audio controls id="audioSource">
+        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+       
+        function trigger() {
+            document.body.requestFullscreen();
+            console.log('executed');
+            document.getElementById('canvas').classList.remove('blur');
+        }
+
+        //code to play the sound
+        function playSound () {
+            document.getElementById("audioSource").play();
+        }
+
+
+        var body = document.body,
+        html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+        document.getElementById("value").innerHTML = height;
+
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
