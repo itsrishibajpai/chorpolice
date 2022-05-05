@@ -14,14 +14,14 @@
 <body>
     <div class="canvas home-canvas">
         <div class="top">
-            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+            <a href="#""><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
         </div>
         <div class="middle">
             <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
         </div>
         <div class="bottom">
             <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
-            <a href="places.html"><img src="images/Icons/Play Now.webp" alt=""></a>
+            <a href="places.html" onclick="playSound()"><img src="images/Icons/Play Now.webp" alt=""></a>
         </div>
     </div>
     <div id="mobile-view">
@@ -29,6 +29,18 @@
             <h2>Rotate your phone to Landscape Mode.</h2>
         </div>
     </div>
+
+    <audio controls id="audioSource">
+        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        //code to play the sound
+        function playSound () {
+            document.getElementById("audioSource").play();
+        }
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
