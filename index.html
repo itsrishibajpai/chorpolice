@@ -13,8 +13,9 @@
 </head>
 <body>
     <div class="canvas home-canvas">
+        <h1 id="value"></h1>
         <div class="top">
-            <a href="#""><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
         </div>
         <div class="middle">
             <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
@@ -40,6 +41,14 @@
         function playSound () {
             document.getElementById("audioSource").play();
         }
+
+
+        var body = document.body,
+        html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+        document.getElementById("value").innerHTML = height;
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
