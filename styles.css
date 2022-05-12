@@ -1011,6 +1011,7 @@ audio {
     font-size: 14px;
     line-height: 22px;
     box-shadow: 10px 10px 16px #222;
+    opacity: 0;
 }
 .chormsg {
     border-radius: 10px 30px 30px 30px;
