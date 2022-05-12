@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Rishi Bajpai">
     <title>TWM - Chor Police</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" /> 
+    <link rel="stylesheet" href="slick/slick.css" /> 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        .slick-list.draggable {
+            padding: 30px 50px;
+        }
+    </style>
 </head>
 <body>
     <div class="canvas home-canvas places">
@@ -35,25 +41,20 @@
         <div class="slidewrapper">
             <div class="slider">
 
-                <a href="bank.html" class="item" onclick="playSound()">
-                    <!-- <img src="images/Icons/offerbanner.webp" class="offerbanner" alt=""> -->
+                <a class="item" onclick="playSound()" id="bank">
                     <img src="images/Levels/Bank_Treasury.webp" alt="" onclick="window.open('bank.html')">
                 </a>
 
-                <a href="temple.html" class="item" onclick="playSound()">
+                <a class="item" onclick="playSound()" id="temple">
                     <img src="images/Levels/Golden_Temple.webp" alt="" onclick="window.open('temple.html')">
                 </a>
 
-                <a href="meuseum.html" class="item" onclick="playSound()">
+                <a class="item" onclick="playSound()" id="meuseum">
                     <img src="images/Levels/Art_Mesuem.webp" alt="" onclick="window.open('museum.html')">
                 </a>
 
-                <a href="palace.html" class="item" onclick="playSound()">
+                <a class="item" onclick="playSound()" id="palace">
                     <img src="images/Levels/Kings_Palace.webp" alt="" onclick="window.open('palace.html')">
-                </a>
-
-                <a href="bank.html" class="item" onclick="playSound()">
-                    <img src="images/Levels/Bank_Treasury.webp" alt="" onclick="window.open('bank.html')">
                 </a>
 
             </div>
@@ -71,6 +72,60 @@
         </div>
     </div>
 
+    <div id="bank-popup" class="game-popup">
+        <span class="close"></span>
+        <div class="selections">
+            <a href="bank.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+            <a href="#"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option" id="bankFriends"></a>
+        </div>
+    </div>
+    <div id="temple-popup" class="game-popup">
+        <span class="close"></span>
+        <div class="selections">
+            <a href="temple.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+            <a href="#" id="templeFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        </div>
+    </div>
+    <div id="meuseum-popup" class="game-popup">
+        <span class="close"></span>
+        <div class="selections">
+            <a href="meuseum.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+            <a href="#" id="meuseumFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        </div>
+    </div>
+    <div id="palace-popup" class="game-popup">
+        <span class="close"></span>
+        <div class="selections">
+            <a href="palace.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+            <a href="#" id="palaceFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        </div>
+    </div>
+
+    <div id="bank-secret" class="secret-popup">
+        <h3>Enter the secret code:</h3>
+        <!-- <span class="close-popup"></span> -->
+        <input type="text" class="secret" required/><br/>
+        <a href="bank.html" class="popup-btn">Join Now</a>
+    </div>
+    <div id="temple-secret" class="secret-popup">
+        <h3>Enter the secret code:</h3>
+        <!-- <span class="close-popup"></span> -->
+        <input type="text" class="secret" required/><br/>
+        <a href="temple.html" class="popup-btn">Join Now</a>
+    </div>
+    <div id="meuseum-secret" class="secret-popup">
+        <h3>Enter the secret code:</h3>
+        <!-- <span class="close-popup"></span> -->
+        <input type="text" class="secret" required/><br/>
+        <a href="meuseum.html" class="popup-btn">Join Now</a>
+    </div>
+    <div id="palace-secret" class="secret-popup">
+        <h3>Enter the secret code:</h3>
+        <!-- <span class="close-popup"></span> -->
+        <input type="text" class="secret" required/><br/>
+        <a href="palace.html" class="popup-btn">Join Now</a>
+    </div>
+
     <div id="mobile-view">
         <div class="notice">
             <h2>Rotate your phone to Landscape Mode.</h2>
@@ -78,7 +133,7 @@
     </div>
 
     <audio controls id="audioSource">
-        <!-- <source src="/sounds/level-select.wav" type="audio/wav"> -->
+        <source src="/sounds/level-select.wav" type="audio/wav">
         <source src="/sounds/level-select.mp3" type="audio/mp3">
         <!-- <source src="/sounds/level-select.m4a" type="audio/m4a"> -->
         Your browser does not support the audio element.
@@ -95,7 +150,7 @@
         }
         
         $('.slider').slick({
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
             dots: false,
@@ -104,11 +159,11 @@
             infinite: true,
             focusOnSelect: true,
             cssEase: 'linear',
-            touchMove: true,
-            autoplay: true,
+            touchMove: false,
+            autoplay: false,
             autoplaySpeed: 1500,
-            prevArrow:'<button class="slick-prev"> <img src="images/Icons/prevbutton.webp" alt=""> </button>',
-            nextArrow:'<button class="slick-next"> <img src="images/Icons/nextbutton.webp" alt=""> </button>',
+            prevArrow:'<button class="slick-prev"><</button>',
+            nextArrow:'<button class="slick-next">></button>',
             
             responsive: [                        
                 {
@@ -119,19 +174,98 @@
                     }
                 },
             ]
-            });
+        });
 
-            var imgs = $('.slider img');
-            imgs.each(function(){
-                var item = $(this).closest('.item');
-                item.css({
-                    'background-image': 'url(' + $(this).attr('src') + ')', 
-                    'background-position': 'center',            
-                    '-webkit-background-size': 'contain',
-                    'background-size': 'contain', 
-                });
-                $(this).hide();
+        var imgs = $('.slider img');
+        imgs.each(function(){
+            var item = $(this).closest('.item');
+            item.css({
+                'background-image': 'url(' + $(this).attr('src') + ')', 
+                'background-position': 'center',            
+                '-webkit-background-size': 'contain',
+                'background-size': 'contain', 
             });
+            $(this).hide();
+        });
+
+        $('.slick-prev').on('click', function(){
+            document.getElementById("audioSource").play();
+        })
+        $('.slick-next').on('click', function(){
+            document.getElementById("audioSource").play();
+        })
+
+        //controls to show/hide popups
+        $('.close').on('click', function(){
+            $('.canvas').removeClass('blur');
+            $('.slidewrapper').removeClass('hide');
+            $('.topbar').removeClass('hide');
+            $('.bottomnav').removeClass('hide');
+            $('.game-popup').removeClass('visible');
+        });
+
+        $('#bank').on('click', function(){
+            $('.canvas').addClass('blur');
+            $('.slidewrapper').addClass('hide');
+            $('.topbar').addClass('hide');
+            $('.bottomnav').addClass('hide');
+            $('#bank-popup').addClass('visible');
+        })
+
+        $('#temple').on('click', function(){
+            $('.canvas').addClass('blur');
+            $('.slidewrapper').addClass('hide');
+            $('.topbar').addClass('hide');
+            $('.bottomnav').addClass('hide');
+            $('#temple-popup').addClass('visible');
+        })
+
+        $('#meuseum').on('click', function(){
+            $('.canvas').addClass('blur');
+            $('.slidewrapper').addClass('hide');
+            $('.topbar').addClass('hide');
+            $('.bottomnav').addClass('hide');
+            $('#meuseum-popup').addClass('visible');
+        })
+
+        $('#palace').on('click', function(){
+            $('.canvas').addClass('blur');
+            $('.slidewrapper').addClass('hide');
+            $('.topbar').addClass('hide');
+            $('.bottomnav').addClass('hide');
+            $('#palace-popup').addClass('visible');
+        })
+
+        //show friends popup
+        $('#bankFriends').on('click', function() {
+            $('.canvas').addClass('blur');
+            $('.game-popup').removeClass('visible');
+            $('#bank-secret').addClass('show');
+        })
+
+        $('#templeFriends').on('click', function() {
+            $('.canvas').addClass('blur');
+            $('.game-popup').removeClass('visible');
+            $('#temple-secret').addClass('show');
+        })
+        
+        $('#meuseumFriends').on('click', function() {
+            $('.canvas').addClass('blur');
+            $('.game-popup').removeClass('visible');
+            $('#meuseum-secret').addClass('show');
+        })
+
+        $('#palaceFriends').on('click', function() {
+            $('.canvas').addClass('blur');
+            $('.game-popup').removeClass('visible');
+            $('#palace-secret').addClass('show');
+        })
+
+        $('.popup-btn').on('click', function(){
+            $('.secret-popup').removeClass('visible');
+            $('.game-popup').removeClass('visible');
+            $('.canvas').removeClass('blur'); 
+        })
 
     </script>
 

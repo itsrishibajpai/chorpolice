@@ -83,49 +83,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
-        
-        $('.slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            dots: false,
-            centerMode: true,
-            variableWidth: true,
-            infinite: true,
-            focusOnSelect: true,
-            cssEase: 'linear',
-            touchMove: true,
-            prevArrow:'<button class="slick-prev"> <img src="images/Icons/prevbutton.webp" alt=""> </button>',
-            nextArrow:'<button class="slick-next"> <img src="images/Icons/nextbutton.webp" alt=""> </button>',
-            
-            //         responsive: [                        
-            //             {
-            //               breakpoint: 576,
-            //               settings: {
-            //                 centerMode: false,
-            //                 variableWidth: false,
-            //               }
-            //             },
-            //         ]
-            });
-
-            var imgs = $('.slider img');
-            imgs.each(function(){
-                var item = $(this).closest('.item');
-                item.css({
-                    'background-image': 'url(' + $(this).attr('src') + ')', 
-                    'background-position': 'center',            
-                    '-webkit-background-size': 'contain',
-                    'background-size': 'contain', 
-                });
-                $(this).hide();
-        });
 
         $(document).ready(function () {
             // Handler for .ready() called.
-            //window.setTimeout(function () {
+            window.setTimeout(function () {
             //location.href = "playground.html?filename=bankbg.webp";
-            //}, 5000);
+            }, 5000);
         });
 
     </script>

@@ -4,32 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Rishi Bajpai">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+    <title>TWM - Chor Police</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
     <style>
-        body{
-            background: white;
+        #trigger {
+            display: block;
+            visibility: visible;
+            position: absolute;
+            z-index: 10;
+            top: 10%;
+            left: 40%;
+            padding: 2rem 4rem;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            background: #051f4d;
+            color: #fefefe;
+            box-shadow: 10px 10px 20px #000;
+            text-decoration: none;
+            font-family: 'montserrat', sans-serif;
+        }
+        .canvas {
+            position: relative;
+        }
+        .hidden {
+            visibility: hidden;
+            display: none;
         }
     </style>
 </head>
 <body>
-
-    <div class="canvas home-canvas">
-        <center>
-            <button onclick="trigger()">Click to Enable FullScreen mode</button>
-            <br><br><br><br>
-            <a href="home.html">Go to Homescreen</a>
-        </center>
+    <a href="#" id="trigger">Click to Fullscreen</a>
+    <div class="canvas home-canvas blur" id="canvas">
+        <div class="top">
+            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+        </div>
+        <div class="middle">
+            <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
+        </div>
+        <div class="bottom">
+            <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
+            <a href="places.html" onclick="playSound()"><img src="images/Icons/Play Now.webp" alt=""></a>
+        </div>
     </div>
-    
-    
+    <div id="mobile-view">
+        <div class="notice">
+            <h2>Rotate your phone to Landscape Mode.</h2>
+        </div>
+    </div>
+
+    <audio controls id="audioSource">
+        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>
-        function trigger() {
+
+        $('#trigger').on('click', function() {
+            $('#canvas').removeClass('blur');
+            $('#trigger').css({'display': 'none', 'visibility': 'hidden'});
             document.body.requestFullscreen();
-            console.log('executed');
-            window.location.href('home.html');
+            document.body.mozRequestFullScreen();
+            document.body.webkitRequestFullScreen();
+            document.body.msRequestFullscreen();
+        })
+
+        //code to play the sound
+        function playSound () {
+            document.getElementById("audioSource").play();
         }
+
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 </html>
