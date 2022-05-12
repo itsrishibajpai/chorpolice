@@ -27,12 +27,15 @@
                     <span class="lifecount" id="chorlife">2</span>
                 </div>
                 <div class="console">
-                    <div class="score-bar">
-                        <span class="title">CHORR</span>
-                        <span class="score runs">0</span>
-                        <span class="score">-</span>
-                        <span class="score wickets">0</span>
-                        <span class="title">AHMED</span>
+                    <div class="stats">
+                        <div class="score-bar">
+                            <span class="title">CHORR</span>
+                            <span class="score runs">0</span>
+                            <span class="score">-</span>
+                            <span class="score wickets">0</span>
+                            <span class="title">AHMED</span>
+                        </div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" alt=""></div>
                     </div>
                     <div class="box">
                         <div id="chor-top" class="top-border"></div>
@@ -55,12 +58,15 @@
                         <div id="police-left" class="left"></div>
                         <div id="police-right" class="right"></div>
                     </div>
-                    <div class="score-bar">
-                        <span class="title">POLICE</span>
-                        <span class="score runs">0</span>
-                        <span class="score">-</span>
-                        <span class="score wickets">0</span>
-                        <span class="title">GEORGE</span>
+                    <div class="stats">
+                        <div class="score-bar">
+                            <span class="title">POLICE</span>
+                            <span class="score runs">0</span>
+                            <span class="score">-</span>
+                            <span class="score wickets">0</span>
+                            <span class="title">GEORGE</span>
+                        </div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" alt=""></div>
                     </div>
                 </div>
                 <div id="heart">
@@ -74,12 +80,13 @@
 
         <div id="boxes">
             <a href="#" id="stonebox">
-                <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" class="floating-box animatebox" data-aos="zoom-in">
+                
             </a>
-            <img src="images/Boxes/Silver.webp" alt="box" id="silver" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Gold.webp" alt="box" id="gold" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Silver.webp" alt="box" id="silver" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Gold.webp" alt="box" id="gold" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
         </div>
 
         <div class="progress">
@@ -137,6 +144,8 @@
         Your browser does not support the audio element.
     </audio>
 </body>
+
+<script src="confetti.js"></script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -208,6 +217,7 @@
 
     function reglow()
     {
+        stopConfetti();
         $(".floating-box").removeClass("faded");
         $(".floating-box").removeClass("activebox");
         $(".floating-box").addClass("animatebox");
