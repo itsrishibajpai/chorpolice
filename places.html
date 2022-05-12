@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+    <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
     <div class="canvas home-canvas places">
         <div class="topbar">
             <div>
@@ -72,58 +73,62 @@
         </div>
     </div>
 
-    <div id="bank-popup" class="game-popup">
-        <span class="close"></span>
-        <div class="selections">
-            <a href="bank.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-            <a href="#"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option" id="bankFriends"></a>
+    <div class="popup-wrapper">
+        <div id="bank-popup" class="game-popup">
+            <!-- <span class="close"></span> -->
+            <div class="selections">
+                <a href="bank.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option" id="bankFriends"></a>
+            </div>
         </div>
-    </div>
-    <div id="temple-popup" class="game-popup">
-        <span class="close"></span>
-        <div class="selections">
-            <a href="temple.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-            <a href="#" id="templeFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        <div id="temple-popup" class="game-popup">
+            <!-- <span class="close"></span> -->
+            <div class="selections">
+                <a href="temple.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="templeFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+            </div>
         </div>
-    </div>
-    <div id="meuseum-popup" class="game-popup">
-        <span class="close"></span>
-        <div class="selections">
-            <a href="meuseum.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-            <a href="#" id="meuseumFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        <div id="meuseum-popup" class="game-popup">
+            <!-- <span class="close"></span> -->
+            <div class="selections">
+                <a href="meuseum.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="meuseumFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+            </div>
         </div>
-    </div>
-    <div id="palace-popup" class="game-popup">
-        <span class="close"></span>
-        <div class="selections">
-            <a href="palace.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-            <a href="#" id="palaceFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+        <div id="palace-popup" class="game-popup">
+            <!-- <span class="close"></span> -->
+            <div class="selections">
+                <a href="palace.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="palaceFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+            </div>
         </div>
     </div>
 
-    <div id="bank-secret" class="secret-popup">
-        <h3>Enter the secret code:</h3>
-        <!-- <span class="close-popup"></span> -->
-        <input type="text" class="secret" required/><br/>
-        <a href="bank.html" class="popup-btn">Join Now</a>
-    </div>
-    <div id="temple-secret" class="secret-popup">
-        <h3>Enter the secret code:</h3>
-        <!-- <span class="close-popup"></span> -->
-        <input type="text" class="secret" required/><br/>
-        <a href="temple.html" class="popup-btn">Join Now</a>
-    </div>
-    <div id="meuseum-secret" class="secret-popup">
-        <h3>Enter the secret code:</h3>
-        <!-- <span class="close-popup"></span> -->
-        <input type="text" class="secret" required/><br/>
-        <a href="meuseum.html" class="popup-btn">Join Now</a>
-    </div>
-    <div id="palace-secret" class="secret-popup">
-        <h3>Enter the secret code:</h3>
-        <!-- <span class="close-popup"></span> -->
-        <input type="text" class="secret" required/><br/>
-        <a href="palace.html" class="popup-btn">Join Now</a>
+    <div class="popup-wrapper">
+        <div id="bank-secret" class="secret-popup">
+            <h3>Enter the secret code:</h3>
+            <!-- <span class="close-popup"></span> -->
+            <input type="text" class="secret" required/><br/>
+            <a href="bank.html" class="popup-btn">Join Now</a>
+        </div>
+        <div id="temple-secret" class="secret-popup">
+            <h3>Enter the secret code:</h3>
+            <!-- <span class="close-popup"></span> -->
+            <input type="text" class="secret" required/><br/>
+            <a href="temple.html" class="popup-btn">Join Now</a>
+        </div>
+        <div id="meuseum-secret" class="secret-popup">
+            <h3>Enter the secret code:</h3>
+            <!-- <span class="close-popup"></span> -->
+            <input type="text" class="secret" required/><br/>
+            <a href="meuseum.html" class="popup-btn">Join Now</a>
+        </div>
+        <div id="palace-secret" class="secret-popup">
+            <h3>Enter the secret code:</h3>
+            <!-- <span class="close-popup"></span> -->
+            <input type="text" class="secret" required/><br/>
+            <a href="palace.html" class="popup-btn">Join Now</a>
+        </div>
     </div>
 
     <div id="mobile-view">
@@ -140,6 +145,7 @@
     </audio>
 
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>

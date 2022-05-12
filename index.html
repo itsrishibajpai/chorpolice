@@ -39,8 +39,8 @@
     </style>
 </head>
 <body>
-    <a href="#" id="trigger">Click to Fullscreen</a>
-    <div class="canvas home-canvas blur" id="canvas">
+    <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
+    <div class="canvas home-canvas" id="canvas">
         <div class="top">
             <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
         </div>
@@ -67,21 +67,14 @@
 
     <script>
 
-        $('#trigger').on('click', function() {
-            $('#canvas').removeClass('blur');
-            $('#trigger').css({'display': 'none', 'visibility': 'hidden'});
-            document.body.requestFullscreen();
-            document.body.mozRequestFullScreen();
-            document.body.webkitRequestFullScreen();
-            document.body.msRequestFullscreen();
-        })
-
         //code to play the sound
         function playSound () {
             document.getElementById("audioSource").play();
         }
 
     </script>
+
+    <script src="main.js"></script>
 
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

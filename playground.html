@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+    <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
     <div id="game-canvas">
 
         <div id="topbar">
@@ -35,7 +36,7 @@
                             <span class="score wickets">0</span>
                             <span class="title">AHMED</span>
                         </div>
-                        <div class="circle"><img src="images/Icons/Plus_icon.webp" alt=""></div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showChorChance();" alt=""></div>
                     </div>
                     <div class="box">
                         <div id="chor-top" class="top-border"></div>
@@ -66,7 +67,7 @@
                             <span class="score wickets">0</span>
                             <span class="title">GEORGE</span>
                         </div>
-                        <div class="circle"><img src="images/Icons/Plus_icon.webp" alt=""></div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showPoliceChance();" alt=""></div>
                     </div>
                 </div>
                 <div id="heart">
@@ -181,6 +182,13 @@
         </div>
     </div>
 
+    <div class="chance-overlay hide" id="chorchance" data-aos="fade-up">
+        <h2 class="text">Its  Ahmed's Turn</h2>
+    </div>
+    <div class="chance-overlay hide" id="policechance"data-aos="fade-up">
+        <h2 class="text">Its George's Turn</h2>
+    </div>
+
     <audio controls id="audioSource">
         <!-- <source src="/sounds/box-select.wav" type="audio/wav"> -->
         <source src="/sounds/box-select.mp3" type="audio/mp3">
@@ -189,193 +197,12 @@
     </audio>
 </body>
 
-<script src="confetti.js"></script>
-<!-- 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
     AOS.init();
-</script> -->
-
-<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-
-<script>
-
-    //code to play the sound
-    function playSound () {
-        document.getElementById("audioSource").play();
-    }
-
-    /* code for slider */
-    function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split('&');
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split('=');
-            if (decodeURIComponent(pair[0]) == variable) {
-                return decodeURIComponent(pair[1]);
-            }
-        }
-        console.log('Query variable %s not found', variable);
-    }
-
-
-    //code to apply dynamic background
-    var path = 'images/Backgrounds/';
-    var filename = getQueryVariable('filename');
-    var url = path+filename;
-    var canvas = document.getElementById('game-canvas');
-    canvas.style.backgroundImage = `url(${url})`;
-
-
-    //code to glow and fade boxes
-    var box = document.querySelectorAll('floating-box');
-    function glow(id)
-    {
-        $(".floating-box").addClass("faded");
-        $(".floating-box").removeClass("animatebox");
-        $(`#${id}`).removeClass("faded");
-        $(`#${id}`).addClass("activebox");
-        playSound();
-        glow = () => {};
-    }
-
-    function stopglow()
-    {
-        $(".floating-box").addClass("faded");
-        $(".floating-box").removeClass("animatebox");
-    }
-
-    $("#stone").click(function() {
-        glow('stone');
-    });
-    $("#silver").click(function() {
-        glow('silver');
-    });
-    $("#gold").click(function() {
-        glow('gold');
-    });
-    $("#platinum").click(function() {
-        glow('platinum');
-    });
-    $("#diamond").click(function() {
-        glow('diamond');
-    });
-
-    function reglow()
-    {
-        stopConfetti();
-        $(".floating-box").removeClass("faded");
-        $(".floating-box").removeClass("activebox");
-        $(".floating-box").addClass("animatebox");
-    }
-
-    function interv () {
-        glow = (id) =>{
-            $(".floating-box").addClass("faded");
-            $(".floating-box").removeClass("animatebox");
-            $(`#${id}`).removeClass("faded");
-            $(`#${id}`).addClass("activebox");
-            playSound();
-            glow = () => {};
-        };
-        reglow();
-    }
-
-    $(function () {
-        setInterval(interv, 15000);
-    });
-
-
-    //code for chor and police timer
-    function addChorTimer() {
-        $('#chor-top').addClass('borderanimate');
-        $('#chor-bottom').addClass('borderanimate');
-        $('#chor-left').addClass('borderanimate');
-        $('#chor-right').addClass('borderanimate');
-    }
-
-    $(function () {
-        setInterval(addChorTimer, 0);
-    });
-
-    function addPoliceTimer() {
-        $('#police-top').addClass('borderanimate');
-        $('#police-bottom').addClass('borderanimate');
-        $('#police-left').addClass('borderanimate');
-        $('#police-right').addClass('borderanimate');
-    }
-
-    $(function () {
-        setInterval(addPoliceTimer, 15000);
-    });
-
-
-    //code for chat functionality
-    var cMessages = document.getElementsByClassName('c-msg');
-    for(i = 0; i<cMessages.length; i++) {
-        cMessages[i].onclick = function(){
-            var clickedMessage = this.innerHTML;
-            $('#policemsg').removeClass('hide');
-            $('#policemsg').addClass('msganimate');
-            $('#chorsent').html(clickedMessage);
-            setTimeout(function(){
-                $('#policemsg').addClass('hide');
-            }, 4000);
-            //console.log(clickedMessage);
-        }
-    }
-    var cReactions = document.getElementsByClassName('cmoji');
-    for(i = 0; i<cReactions.length; i++) {
-        cReactions[i].onclick = function(){
-            var clickedMessage = this.innerHTML;
-            $('#policemsg').removeClass('hide');
-            $('#policemsg').addClass('msganimate');
-            $('#chorsent').html(clickedMessage);
-            setTimeout(function(){
-                $('#policemsg').addClass('hide');
-            }, 4000);
-            //console.log(clickedMessage);
-        }
-    }
-
-    var pMessages = document.getElementsByClassName('p-msg');
-    for(i = 0; i<pMessages.length; i++) {
-        pMessages[i].onclick = function(){
-            var clickedMessage = this.innerHTML;
-            $('#chormsg').removeClass('hide');
-            $('#chormsg').addClass('msganimate');
-            $('#policesent').html(clickedMessage);
-            setTimeout(function(){
-                $('#chormsg').addClass('hide');
-            }, 4000);
-            //console.log(clickedMessage);
-        }
-    }
-    var pReactions = document.getElementsByClassName('pmoji');
-    for(i = 0; i<pReactions.length; i++) {
-        pReactions[i].onclick = function(){
-            var clickedMessage = this.innerHTML;
-            $('#chormsg').removeClass('hide');
-            $('#chormsg').addClass('msganimate');
-            $('#policesent').html(clickedMessage);
-            setTimeout(function(){
-                $('#chormsg').addClass('hide');
-            }, 4000);
-            //console.log(clickedMessage);
-        }
-    }
-
-    $('#chor-chat').click(function () {
-        $('#policeChatBox').removeClass('modal-right');
-        $('#policemsg').addClass('hide');
-        $('#chorChatBox').toggleClass('modal-left');
-    });
-    $('#police-chat').click(function () {
-        $('#chorChatBox').removeClass('modal-left');
-        $('#chormsg').addClass('hide');
-        $('#policeChatBox').toggleClass('modal-right');
-    });
-
 </script>
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script src="main.js"></script>
+<script src="confetti.js"></script>
+
 </html> 
