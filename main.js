@@ -131,9 +131,10 @@ var cMessages = document.getElementsByClassName('c-msg');
 for(i = 0; i<cMessages.length; i++) {
     cMessages[i].onclick = function(){
         var clickedMessage = this.innerHTML;
-        $('#policemsg').removeClass('hide');
-        $('#policemsg').addClass('msganimate');
-        $('#chorsent').html(clickedMessage);
+        $('#chorChatBox').addClass('hide');
+        $('#chormsg').removeClass('hide');
+        $('#chormsg').addClass('msganimate');
+        $('#policesent').html(clickedMessage);
         setTimeout(function(){
             $('#policemsg').addClass('hide');
         }, 4000);
@@ -144,9 +145,11 @@ var cReactions = document.getElementsByClassName('cmoji');
 for(i = 0; i<cReactions.length; i++) {
     cReactions[i].onclick = function(){
         var clickedMessage = this.innerHTML;
-        $('#policemsg').removeClass('hide');
-        $('#policemsg').addClass('msganimate');
-        $('#chorsent').html(clickedMessage);
+        $('#chorChatBox').addClass('hide');
+        $('#chormsg').removeClass('hide');
+        $('#chormsg').addClass('msganimate');
+        $('#chormsg').addClass('enlarge');
+        $('#policesent').html(clickedMessage);
         setTimeout(function(){
             $('#policemsg').addClass('hide');
         }, 4000);
@@ -158,9 +161,10 @@ var pMessages = document.getElementsByClassName('p-msg');
 for(i = 0; i<pMessages.length; i++) {
     pMessages[i].onclick = function(){
         var clickedMessage = this.innerHTML;
-        $('#chormsg').removeClass('hide');
-        $('#chormsg').addClass('msganimate');
-        $('#policesent').html(clickedMessage);
+        $('#policeChatBox').addClass('hide');
+        $('#policemsg').removeClass('hide');
+        $('#policemsg').addClass('msganimate');
+        $('#chorsent').html(clickedMessage);
         setTimeout(function(){
             $('#chormsg').addClass('hide');
         }, 4000);
@@ -171,9 +175,11 @@ var pReactions = document.getElementsByClassName('pmoji');
 for(i = 0; i<pReactions.length; i++) {
     pReactions[i].onclick = function(){
         var clickedMessage = this.innerHTML;
-        $('#chormsg').removeClass('hide');
-        $('#chormsg').addClass('msganimate');
-        $('#policesent').html(clickedMessage);
+        $('#policeChatBox').addClass('hide');
+        $('#policemsg').removeClass('hide');
+        $('#policemsg').addClass('msganimate');
+        $('#policemsg').addClass('enlarge');
+        $('#chorsent').html(clickedMessage);
         setTimeout(function(){
             $('#chormsg').addClass('hide');
         }, 4000);
@@ -182,11 +188,13 @@ for(i = 0; i<pReactions.length; i++) {
 }
 
 $('#chor-chat').click(function () {
+    $('#chorChatBox').removeClass('hide');
     $('#policeChatBox').removeClass('modal-right');
     $('#policemsg').addClass('hide');
     $('#chorChatBox').toggleClass('modal-left');
 });
 $('#police-chat').click(function () {
+    $('#policeChatBox').removeClass('hide');
     $('#chorChatBox').removeClass('modal-left');
     $('#chormsg').addClass('hide');
     $('#policeChatBox').toggleClass('modal-right');

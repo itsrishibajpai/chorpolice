@@ -582,6 +582,30 @@ audio {
     /* display: none; */
     visibility: hidden;
 }
+.modal-left::before{
+    content: " ";
+    position: absolute;
+    top: -29px;
+    left: 8%;
+    margin-left: -15px;
+    border-width: 15px;
+    z-index: 0;
+    border-style: solid;
+    transform: rotate(180deg);
+    border-color: #000 transparent transparent transparent;
+}
+.modal-right::before{
+    content: " ";
+    position: absolute;
+    top: -29px;
+    right: 8%;
+    margin-right: -15px;
+    border-width: 15px;
+    z-index: 0;
+    border-style: solid;
+    transform: rotate(180deg);
+    border-color: #000 transparent transparent transparent;
+}
 .modal-left {
     left: 60px;
     visibility: visible;
@@ -1021,11 +1045,11 @@ audio {
 .received {
     background: #101010;
     padding: 12px 20px;
-    width: fit-content;
-    max-width: 260px;
+    width: 260px;
+    /* max-width: 260px; */
     position: absolute;
     z-index: 22222222;
-    top: 50px;
+    top: 140px;
     color: #d0ddf0;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -1034,17 +1058,58 @@ audio {
     opacity: 0;
 }
 .chormsg {
-    border-radius: 10px 30px 30px 30px;
-    left: 70px;
+    border-radius: 24px;
+    left: 22%;
+}
+.chormsg::after {
+    content: " ";
+    position: absolute;
+    bottom: 99%;  /* At the top of the tooltip */
+    left: 90%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 .policemsg {
-    border-radius: 30px 10px 30px 30px;
-    right: 70px;
+    border-radius: 24px;
+    right: 22%;
+}
+.policemsg::after {
+    content: " ";
+    position: absolute;
+    bottom: 99%;  /* At the top of the tooltip */
+    left: 10%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
 }
 .msganimate{
     animation-name: fadeout;
     animation-duration: 5s;
     animation-iteration-count: 1;
+}
+.enlarge {
+    transition: 0.5s ease;
+    font-size: 32px;
+    width: auto;
+}
+.enlarge::after {
+    content: " ";
+    position: absolute;
+    bottom: 99%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.policemsg.enlarge {
+    right: 38%;
+}
+.chormsg.enlarge {
+    left: 38%;
 }
 .chance-overlay::before {
     content: '';
