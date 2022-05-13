@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rishi Bajpai">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+    <title>TWM - Chor Police</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
+    <div class="canvas home-canvas" id="canvas">
+        <div class="top">
+            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+        </div>
+        <div class="middle">
+            <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
+        </div>
+        <div class="bottom">
+            <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
+            <a href="places.html" onclick="playSound()"><img src="images/Icons/Play Now.webp" alt=""></a>
+        </div>
+    </div>
+    <div id="mobile-view">
+        <div class="notice">
+            <h2>Rotate your phone to Landscape Mode.</h2>
+        </div>
+    </div>
+
+    <audio controls id="audioSource">
+        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        //code to play the sound
+        function playSound () {
+            document.getElementById("audioSource").play();
+        }
+
+    </script>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
