@@ -581,8 +581,11 @@
         width: 200px;
         height: 220px;
         padding: 10px;
-        top: 25px;
+        top: 60px;
         z-index: 1000;
+    }
+    .modal-left {
+        left: 18px;
     }
     .messages {
         height: 140px;
@@ -591,6 +594,9 @@
     .message {
         font-size: 12px;
         line-height: 18px;
+    }
+    .progress {
+        margin-top: 60px;
     }
 }
 
@@ -631,6 +637,7 @@
     .progress {
         padding: 0px 2px;
         height: 16px;
+        margin-top: 40px;
     }
     .progress-value {
         height: 11px;

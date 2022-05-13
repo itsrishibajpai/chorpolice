@@ -505,14 +505,11 @@ audio {
     padding: 120px 0px 80px 0px;
 }
 .floating-box {
-    width: 250px;
+    width: 260px;
     position: relative;
     transform: scale(1.2);
 }
 
-.floating-box {
-    width: 210px;
-}
 .score-bar {
     width: 200px;
     padding: 20px 30px;
