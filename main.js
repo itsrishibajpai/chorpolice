@@ -95,10 +95,16 @@ $(function () {
 
 function showChorChance() {
     $('#chorchance').removeClass('hide');
+    setTimeout(function(){
+        $('#chorchance').addClass('hide');
+    }, 3000);
 }
 
 function showPoliceChance() {
     $('#policechance').removeClass('hide');
+    setTimeout(function(){
+        $('#policechance').addClass('hide');
+    }, 3000);
 }
 
 

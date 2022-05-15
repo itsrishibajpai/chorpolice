@@ -57,6 +57,8 @@
     }
     .chance-overlay h2 {
         font-size: 3rem;
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 3px transparent;
     }
 }
 
@@ -454,9 +456,6 @@
         margin-top: 34px;
         font-size: 0.6rem;
         font-weight: normal;
-    }
-    .chance-overlay {
-        padding: 8% 5%;
     }
     .chance-overlay h2 {
         font-size: 2rem;

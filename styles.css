@@ -1111,40 +1111,43 @@ audio {
 .chormsg.enlarge {
     left: 38%;
 }
-.chance-overlay::before {
-    content: '';
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 .chance-overlay {
     position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 70%;
-    padding: 10% 5%;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     z-index: 33333333333333;
-    background: #000;
-    border-radius: 75% 54% 42% 51% / 69% 72% 33% 35% ;
-    opacity: 0;
+    background: rgba(0, 0, 0, 0.9);
     animation: fadeout 2s ease-in 1;
+}
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    vertical-align: middle;
+    height: 100%;
 }
 .text {
     background: linear-gradient(-45deg, #eeaa52, #950fdd, #2394d5, #2af3b7);
-    background-size: 100% 100%;
+    background-size: 80% 100%;
 }
 .chance-overlay h2 {
-    font-size: 5rem;
+    width: 100%;
+    font-size: 8rem;
     letter-spacing: 0.3rem;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 5px transparent;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
 .popup-wrapper {
@@ -1152,6 +1155,14 @@ audio {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+/* Result Page CSS */
+.result-canvas {
+    background: url('images/Backgrounds/Bank\ -\ Score\ Background.webp');
+    background-size: cover;
+    background-position: center;
+    backgroun
 }
 
 
