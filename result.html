@@ -16,9 +16,51 @@
         <div class="middle">
             <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
         </div>
-        <div class="bottom">
+        <div class="content">
+            <div class="score-panel">
+                <h2>SCORE BOARD</h2>
+                <div class="panel">
+                    <div class="player-card">
+                        <div class="player-profile">
+                            <!-- dynamic image will be loaded from backend using this img tag -->
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                        <h4 class="playername">AHMED</h4>
+                        <h1 class="match-score">90</h1>
+                        <h4 class="match-title">WINNER</h4>
+                    </div>
+                    <div class="hrule"></div>
+                    <div class="player-card">
+                        <div class="player-profile">
+                            <!-- dynamic image will be loaded from backend using this img tag -->
+                            <!-- <img src="" alt=""> -->
+                        </div>
+                        <h4 class="playername">GEORGE</h4>
+                        <h1 class="match-score">70</h1>
+                        <h4 class="match-title">LOSER</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h4 class="statement">You just lost the Chorr!</h4>
+                <div class="button-group">
+                    <a href="index.html" class="buttonblue">HOME</a>
+                    <a href="#" class="buttonblue" id="ask">PLAY AGAIN</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="modal-center hidepopup" id="playAgain">
+        <div class="play-again">
+            <h2>George is asking you to play again?</h2>
+            <div class="button-group">
+                <a href="index.html" class="buttonwhite">Not Interested</a>
+                <a href="http://127.0.0.1:5500/playground.html?filename=meuseumbg.webp" class="buttonwhite">Play Again</a>
+            </div>
+        </div>
+    </div>
+
     <div id="mobile-view">
         <div class="notice">
             <h2>Rotate your phone to Landscape Mode.</h2>
@@ -38,6 +80,10 @@
         function playSound () {
             document.getElementById("audioSource").play();
         }
+
+        $("#ask").click(function() {
+            $('#playAgain').removeClass('hidepopup');
+        });
 
     </script>
 

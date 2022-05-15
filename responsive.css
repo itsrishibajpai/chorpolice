@@ -610,7 +610,7 @@
         left: 18px;
     }
     .messages {
-        height: 140px;
+        height: 120px;
         margin-top: 10px;
     }
     .message {
@@ -625,6 +625,67 @@
         line-height: 16px;
         padding: 8px 14px;
         top: 80px;
+    }
+    .result-canvas {
+        background-position: bottom;
+    }
+    .result-canvas > .middle {
+        display: none;
+        visibility: hidden;
+    }
+    .score-panel {
+        padding: 20px;
+    }
+    .score-panel h2 {
+        font-size: 1rem;
+    }
+    .panel {
+        margin: 1.5rem 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .hrule {
+        height: 130px;
+        width: 1px;
+    }
+    .player-profile {
+        width: 50px;
+        height: 62px;
+    }
+    .playername {
+        font-size: 0.6rem;
+    }
+    .match-score {
+        font-size: 1.5rem;
+        margin: .25rem 0rem;
+    }
+    .footer {
+        margin-top: 1rem;
+    }
+    .match-title {
+        font-size: 0.8rem;
+    }
+    .button-group {
+        margin: 12px auto;
+        width: 70%;
+    }
+    .statement {
+        font-size: 0.7rem;
+        margin: .5rem 0rem;
+    }
+    .buttonblue {
+        line-height: 1.2rem;
+        font-size: 0.7rem;
+        width: 110px;
+    }
+    .play-again h2 {
+        font-size: 1.6rem;
+    }
+    .buttonwhite {
+        font-size: 0.8rem;
+        line-height: 1.6rem;
+        padding: 8px 18px;
+        border: 1px solid #fff;
+        box-shadow: 0.4em 0.4em 0 0 rgb(67, 88, 162);
     }
 }
 
@@ -675,6 +736,47 @@
         line-height: 16px;
         padding: 8px 14px;
         top: 80px;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 320px) {
+    .score-panel {
+        border-radius: 25px;
+    }
+    .score-panel h2 {
+        font-size: 0.8rem;
+        letter-spacing: .05rem;
+    }
+    .hrule {
+        height: 115px;
+    }
+    .panel {
+        margin: 1rem 1rem;
+        margin-bottom: .5rem;
+    }
+    .player-profile {
+        width: 43px;
+        height: 55px;
+    }
+    .playername {
+        font-size: 0.6rem;
+        letter-spacing: .06rem;
+    }
+    .match-score {
+        font-size: 1.2rem;
+    }
+    .match-title {
+        font-size: 0.7rem;
+    }
+    .statement {
+        font-size: .7rem;
+    }
+    .buttonblue {
+        line-height: 1rem;
+        font-size: 0.6rem;
+        letter-spacing: .05rem;
+        width: 100px;
+        padding: 9px 4px;
     }
 }
 

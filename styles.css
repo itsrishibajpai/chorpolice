@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 body {
     overflow: hidden;
@@ -1159,11 +1160,146 @@ audio {
 
 /* Result Page CSS */
 .result-canvas {
-    background: url('images/Backgrounds/Bank\ -\ Score\ Background.webp');
+    background: url('images/Backgrounds/King_s\ Palace\ -\ Score\ Background.webp');
     background-size: cover;
     background-position: center;
-    backgroun
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
+.score-panel {
+    width: 50vw;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    border-radius: 40px;
+    color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
+}
+.score-panel h2 {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+}
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 3rem 1rem;
+}
+.hrule {
+    height: 200px;
+    background: rgb(169, 169, 169);
+    width: 2px;
+}
+.player-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.player-profile {
+    width: 70px;
+    height: 87px;
+    background: url('images/Icons/Home\ Profile\ Picture.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+}
+.playername {
+    font-weight: 500;
+    font-size: 1rem;
+}
+.match-score {
+    font-size: 3.5rem;
+}
+.statement {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.footer {
+    margin-top: 2rem;
+}
+.button-group {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60%;
+}
+.buttonblue {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, #3D5A7F, #5E82BE);
+    padding: 8px 0px;
+    line-height: 2rem;
+    width: 150px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 8px 3px 10px #000000be;
+}
+.modal-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(3, 22, 48, 0.96), #010d1dea);
+    z-index: 999999999999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.play-again {
+    width: 60%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+.play-again h2 {
+    text-align: center;
+    font-style: italic;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.modal-center .button-group {
+    width: 100%;
+    justify-content: space-around;
+}
+.buttonwhite {
+    /* background: #fff; */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 2rem;
+    padding: 12px 22px;
+    width: 200px;
+    margin: 10px 20px;
+    text-align: center;
+    border: 2px solid #fff;
+    box-shadow: 0.4em 0.4em 0 0 rgb(67, 88, 162);
+}
+.buttonwhite:hover, .buttonwhite:focus {
+    box-shadow: 0 0 0 0 #fff, inset 6em 3.5em 0 0 #fff;
+    color: #051f4d;
+}
+.hidepopup {
+    display: none;
+    visibility: hidden;
+}
+
+.wrong {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
 
 
 /* ========== Animation CSS =========== */
@@ -1199,6 +1335,7 @@ audio {
         opacity: .8;
     }
 }
+
 @keyframes spinLeftCoin {
     0%{
         top: -110px;
@@ -1271,6 +1408,7 @@ audio {
         top: 0px;
     }
 }
+
 @keyframes saturate {
     0% {
         filter: saturate(50%);
@@ -1306,5 +1444,22 @@ audio {
     }
 }
 
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-3px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(5px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-8px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(8px, 0, 0);
+    }
+  }
 
 

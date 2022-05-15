@@ -69,6 +69,16 @@ $("#diamond").click(function() {
     glow('diamond');
 });
 
+function wrong() {
+    $('.floating-box').addClass('faded');
+    $('#diamond').addClass('wrong');
+}
+
+$("#diamond").click(function() {
+    wrong();
+    stopConfetti();
+});
+
 function reglow()
 {
     stopConfetti();
