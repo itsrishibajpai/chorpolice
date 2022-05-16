@@ -1072,11 +1072,39 @@ audio {
     border-style: solid;
     border-color: transparent transparent black transparent;
 }
+.chormoji {
+    border-radius: 24px;
+    left: 22%;
+}
+.chormoji::after {
+    content: " ";
+    position: absolute;
+    bottom: 99%;  /* At the top of the tooltip */
+    left: 90%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
 .policemsg {
     border-radius: 24px;
     right: 22%;
 }
 .policemsg::after {
+    content: " ";
+    position: absolute;
+    bottom: 99%;  /* At the top of the tooltip */
+    left: 10%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+.policemoji {
+    border-radius: 24px;
+    right: 22%;
+}
+.policemoji::after {
     content: " ";
     position: absolute;
     bottom: 99%;  /* At the top of the tooltip */
@@ -1106,10 +1134,10 @@ audio {
     border-style: solid;
     border-color: transparent transparent black transparent;
 }
-.policemsg.enlarge {
+.policemoji.enlarge {
     right: 38%;
 }
-.chormsg.enlarge {
+.chormoji.enlarge {
     left: 38%;
 }
 .chance-overlay {
@@ -1124,6 +1152,7 @@ audio {
     z-index: 33333333333333;
     background: rgba(0, 0, 0, 0.9);
     animation: fadeout 2s ease-in 1;
+    opacity: 0;
 }
 .content-center {
     display: flex;
