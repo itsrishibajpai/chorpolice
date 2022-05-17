@@ -80,6 +80,16 @@
         Your browser does not support the audio element.
     </audio>
 
+    <!-- game loading overlay -->
+    <div class="popup-block hidepopup" id="loading">
+        <h2>Game is loading, Please wait!</h2>
+        <div class="progress-wrapper">
+            <div id="myBar" class="progress-bar" style="height:24px; width:20%; border-radius: 10px;"></div>
+            </div>
+            <p id="progress">10%</p>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="main.js"></script>
 
@@ -91,6 +101,26 @@
             location.href = "playground.html?filename=temple.webp";
             }, 3000);
         });
+
+        $("#coinstake").click(function() {
+            $('#loading').removeClass('hidepopup');
+            move();
+        });
+
+        function move() {
+            var elem = document.getElementById("myBar");   
+            var width = 10;
+            var id = setInterval(frame, 300);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++; 
+                    elem.style.width = width + '%'; 
+                    document.getElementById("progress").innerHTML = width * 1  + '%';
+                }
+            }
+        }
 
     </script>
 

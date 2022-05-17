@@ -27,7 +27,11 @@
         
         <div class="battleground">
             <div class="player-card" id="player1">
-                <img src="images/Icons/Home Profile Picture.webp" alt="" id="playerOneImage" class="player">
+                <div class="profile">
+                    <!-- dynamic image will be loaded from backend using this img tag -->
+                    <img src="images/Icons/ahmed.jpeg" alt="" id="playerOneImage" class="profilepicture">
+                </div>
+                
                 <h3 id="playerOneName">AHMED</h3>
                 <div class="coins">
                     <span id="playerOneCoins">1000</span>
@@ -45,7 +49,10 @@
                 <span id="coinstake">1234</span>
             </div>
             <div class="player-card" id="player2">
-                <img src="images/Icons/Home Profile Picture.webp" alt="" id="playerTwoImage" class="player">
+                <div class="profile">
+                    <!-- dynamic image will be loaded from backend using this img tag -->
+                    <img src="images/Icons/george.jpeg" alt="" id="playerTwoImage" class="profilepicture">
+                </div>
                 <h3 id="playerTwoName">GEORGE</h3>
                 <div class="coins">
                     <span class="coin-single coin-right"></span>
@@ -72,12 +79,22 @@
         </div>
     </div>
 
-    <audio controls autoplay>
+    <!-- game loading overlay -->
+    <div class="popup-block hidepopup" id="loading">
+        <h2>Game is loading, Please wait!</h2>
+        <div class="progress-wrapper">
+            <div id="myBar" class="progress-bar" style="height:24px; width:20%; border-radius: 10px;"></div>
+            </div>
+            <p id="progress">10%</p>
+        </div>
+    </div>
+
+    <!-- <audio controls autoplay>
         <source src="/sounds/coinflip-sound.wav" type="audio/wav">
         <source src="/sounds/coinflip-sound.mp3" type="audio/mp3">
         <source src="/sounds/coinflip-sound.m4a" type="audio/m4a">
         Your browser does not support the audio element.
-    </audio>
+    </audio> -->
 
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="main.js"></script>
@@ -90,6 +107,27 @@
             location.href = "playground.html?filename=bankbg.webp";
             }, 3000);
         });
+
+        $("#coinstake").click(function() {
+            $('#loading').removeClass('hidepopup');
+            move();
+        });
+
+        function move() {
+            var elem = document.getElementById("myBar");   
+            var width = 10;
+            var id = setInterval(frame, 300);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++; 
+                    elem.style.width = width + '%'; 
+                    document.getElementById("progress").innerHTML = width * 1  + '%';
+                }
+            }
+        }
+        //window.setTimeout(move(), 3000);
 
     </script>
 
