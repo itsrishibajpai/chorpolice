@@ -215,3 +215,144 @@ $('#police-chat').click(function () {
     $('#chormsg').addClass('hide');
     $('#policeChatBox').toggleClass('modal-right');
 });
+
+
+// JS Code for enabling / disabling popups in Game Level Cards
+//controls to show/hide popups
+$('.close').on('click', function(){
+    $('.canvas').removeClass('blur');
+    $('.slidewrapper').removeClass('hide');
+    $('.topbar').removeClass('hide');
+    $('.bottomnav').removeClass('hide');
+    $('.game-popup').removeClass('visible');
+});
+
+$('#bank').on('click', function(){
+    $('.canvas').addClass('blur');
+    $('.slidewrapper').addClass('hide');
+    $('.topbar').addClass('hide');
+    $('.bottomnav').addClass('hide');
+    $('#bank-popup').addClass('visible');
+})
+
+$('#temple').on('click', function(){
+    $('.canvas').addClass('blur');
+    $('.slidewrapper').addClass('hide');
+    $('.topbar').addClass('hide');
+    $('.bottomnav').addClass('hide');
+    $('#temple-popup').addClass('visible');
+})
+
+$('#meuseum').on('click', function(){
+    $('.canvas').addClass('blur');
+    $('.slidewrapper').addClass('hide');
+    $('.topbar').addClass('hide');
+    $('.bottomnav').addClass('hide');
+    $('#meuseum-popup').addClass('visible');
+})
+
+$('#palace').on('click', function(){
+    $('.canvas').addClass('blur');
+    $('.slidewrapper').addClass('hide');
+    $('.topbar').addClass('hide');
+    $('.bottomnav').addClass('hide');
+    $('#palace-popup').addClass('visible');
+})
+
+//show friends popup to choose between create and join match
+$('#bankFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.secret-popup').addClass('hide');
+    $('#bank-friends').addClass('show');
+})
+
+$('#templeFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.secret-popup').addClass('hide');
+    $('#temple-friends').addClass('show');
+})
+
+$('#meuseumFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.secret-popup').addClass('hide');
+    $('#meuseum-friends').addClass('show');
+})
+
+$('#palaceFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.secret-popup').addClass('hide');
+    $('#palace-friends').addClass('show');
+})
+
+//show friends create match popup -- match ID will be given to copy 
+$('#copyBankSecret').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#bankCopy').addClass('show');
+})
+
+$('#templeFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#templeCopy').addClass('show');
+})
+
+$('#meuseumFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#meuseumCopy').addClass('show');
+})
+
+$('#palaceFriends').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#palaceCopy').addClass('show');
+})
+
+//show friends secret input popup -- secret input will be given to paste match ID
+$('#copyBankSecret').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#bank-secret').removeClass('hide');
+    $('#bank-secret').addClass('show');
+})
+
+$('#copyTempleSecret').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#temple-secret').removeClass('hide');
+    $('#temple-secret').addClass('show');
+})
+
+$('#copyMeuseumSecret').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#meuseum-secret').removeClass('hide');
+    $('#meuseum-secret').addClass('show');
+})
+
+$('#copyPalaceSecret').on('click', function() {
+    $('.canvas').addClass('blur');
+    $('.game-popup').removeClass('visible');
+    $('.game-popup').removeClass('show');
+    $('#palace-secret').removeClass('hide');
+    $('#palace-secret').addClass('show');
+})
+
+//closing the popup
+$('.popup-btn').on('click', function(){
+    $('.secret-popup').removeClass('visible');
+    $('.game-popup').removeClass('visible');
+    $('.canvas').removeClass('blur'); 
+})

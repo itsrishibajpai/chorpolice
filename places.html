@@ -43,7 +43,10 @@
             <div class="slider">
 
                 <a class="item" onclick="playSound()" id="bank">
-                    <img src="images/Levels/Bank_Treasury.webp" alt="" onclick="window.open('bank.html')">
+                    <img src="images/Levels/Bank_Treasury.webp" alt="" onclick="window.open('bank.html')" usemap="#image-map">
+                    <map name="image-map">
+                        <area target="_self" alt="terms" title="terms" href="#" coords="446,0,445,54,484,83,525,55,524,0" shape="poly" onmouseover="alert('triggered');">
+                    </map>
                 </a>
 
                 <a class="item" onclick="playSound()" id="temple">
@@ -62,13 +65,13 @@
         </div>
         <div class="bottomnav">
             <a href="index.html">
-                <img src="images/Icons/Home_backButton.webp" alt="back" class="icons">
+                <img src="images/Icons/Home_backButton.webp" alt="back" class="icons" onclick="clickSound()" onmouseover="clickSound()">
             </a>
-            <a href="index.html">
-                <img src="images/Icons/Homepage Rules.webp" alt="rules" class="icons">
+            <a href="#" id="rulesTrigger">
+                <img src="images/Icons/Homepage Rules.webp" alt="rules" class="icons" onclick="clickSound()" onmouseover="clickSound()">
             </a>
-            <a href="index.html">
-                <img src="images/Icons/Homepage_Friends.webp" alt="group" class="icons">
+            <a href="#">
+                <img src="images/Icons/Homepage_Friends.webp" alt="group" class="icons" onclick="clickSound()" onmouseover="clickSound()">
             </a>
         </div>
     </div>
@@ -140,28 +143,28 @@
     <!-- Copy Secret Code Popup -->
     <div class="popup-wrapper">
         <div id="bankCopy" class="secret-popup">
-            <h3>Enter the secret code:</h3>
+            <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
-            <input type="text" class="secret" required/><br/>
-            <a href="bank.html" class="popup-btn">Join Now</a>
+            <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
+            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="templeCopy" class="secret-popup">
-            <h3>Enter the secret code:</h3>
+            <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
-            <input type="text" class="secret" required/><br/>
-            <a href="temple.html" class="popup-btn">Join Now</a>
+            <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
+            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="meuseumCopy" class="secret-popup">
-            <h3>Enter the secret code:</h3>
+            <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
-            <input type="text" class="secret" required/><br/>
-            <a href="meuseum.html" class="popup-btn">Join Now</a>
+            <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
+            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="palaceCopy" class="secret-popup">
-            <h3>Enter the secret code:</h3>
+            <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
-            <input type="text" class="secret" required/><br/>
-            <a href="palace.html" class="popup-btn">Join Now</a>
+            <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
+            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
         </div>
     </div>
 
@@ -193,7 +196,27 @@
         </div>
     </div>
 
-
+    <!-- game loading overlay -->
+    <div class="content-popup hide" id="rules">
+        <div class="content-wrapper">
+            <h1 class="heading-top">How to Play ?</h1>
+            <p class="popup-content">
+                <ul class="popup-content">
+                    <li><span class="bullet">⚛︎</span>For example: You have Imp = 1 Life card. Now you're on the playing screen. </li>
+                    <li><span class="bullet">⚛︎</span>Go ahead and grab Diamond Box. If Police chooses something other than Diamond box like Silver Box, then you looted successfully which will be highlighted on Gameplay mechanics. </li>
+                    <li><span class="bullet">⚛︎</span>Now your loot on the scoreboard is '6-0' right now. 6 representing the Diamond Box, and 0 for the number of life lost. </li>
+                    <li><span class="bullet">⚛︎</span>Let's say in the next round you looted Gold Box and the Police thought Platinum Box, then you again looted box of Gold. </li>
+                    <li><span class="bullet">⚛︎</span>Now your total score is ‘8-0' and you have 0 life’s left. Let's say you plan to loot Platinum Box and police guesses the same. You’re out because police caught You.</li>
+                    <li><span class="bullet">⚛︎</span>Now, since you were only playing with 1 life card, you have lost all your life’s and your turn to loot more boxes is over. </li>
+                    <li><span class="bullet">⚛︎</span>Now, on the playing screen, (your score + 1). This is the number of score the opponent needs to win. So now it’s is your time to be ‘Police’ and opponents time to loot. </li>
+                    <li><span class="bullet">⚛︎</span>The opponent plays 1,0,1,2,0,1 while you tries to catch him guessing 6,6,0,4,1,0. If you sum up the opponents loot, his score is 5 (1+0+1+2+1+0). </li>
+                    <li><span class="bullet">⚛︎</span>Good job Ed! The opponent cannot score anymore loot now because all the life’s are killed. </li>
+                    <li><span class="bullet">⚛︎</span>As you can see, you looted 9-0 with your life at risk and opponent looted 5-0. This means that you were able to rob extra 4 more boxes successfully & claimed as a “True Chor”! 🏆</li>
+                </ul>
+            </p>
+            <a href="#" class="closebutton" id="finish" onclick="clickSound()" onmouseover="clickSound()">I have read all the rules Carefully</a>
+        </div>
+    </div>
 
     <div id="mobile-view">
         <div class="notice">
@@ -208,15 +231,33 @@
         Your browser does not support the audio element.
     </audio>
 
+    <audio controls id="clickSound">
+        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <script>
 
+        //code for rules popup
+        $('#finish').on('click', function(){
+            $('#rules').addClass('hide');
+        });
+
+        document.getElementById('rulesTrigger').onclick = function() {
+            document.getElementById('rules').classList.remove('hide')
+        };
+
         //code to play the sound
         function playSound () {
             document.getElementById("audioSource").play();
+        }
+        //code to play the sound
+        function clickSound () {
+            document.getElementById("clickSound").play();
         }
         
         $('.slider').slick({
@@ -336,31 +377,35 @@
         })
 
         //show friends create match popup -- match ID will be given to copy 
-        $('#copyBankSecret').on('click', function() {
+        $('#bankSecretCode').on('click', function() {
             $('.canvas').addClass('blur');
             $('.game-popup').removeClass('visible');
             $('.game-popup').removeClass('show');
+            $('#bankCopy').removeClass('hide');
             $('#bankCopy').addClass('show');
         })
 
-        $('#templeFriends').on('click', function() {
+        $('#templeSecretCode').on('click', function() {
             $('.canvas').addClass('blur');
             $('.game-popup').removeClass('visible');
             $('.game-popup').removeClass('show');
+            $('#templeCopy').removeClass('hide');
             $('#templeCopy').addClass('show');
         })
         
-        $('#meuseumFriends').on('click', function() {
+        $('#meuseumSecretCode').on('click', function() {
             $('.canvas').addClass('blur');
             $('.game-popup').removeClass('visible');
             $('.game-popup').removeClass('show');
+            $('#meuseumCopy').removeClass('hide');
             $('#meuseumCopy').addClass('show');
         })
 
-        $('#palaceFriends').on('click', function() {
+        $('#palaceSecretCode').on('click', function() {
             $('.canvas').addClass('blur');
             $('.game-popup').removeClass('visible');
             $('.game-popup').removeClass('show');
+            $('#palaceCopy').removeClass('hide');
             $('#palaceCopy').addClass('show');
         })
 
@@ -403,6 +448,11 @@
             $('.game-popup').removeClass('visible');
             $('.canvas').removeClass('blur'); 
         })
+
+        //copying the secret code to clipboard
+        function copyToClipboard() {
+            // code to copy the text in the input field
+        }
 
     </script>
 

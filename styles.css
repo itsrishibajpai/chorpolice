@@ -719,6 +719,21 @@ audio {
     justify-content: flex-start;
     border: 1px solid #222;
 }
+.emoji-bar::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+.emoji-bar::-webkit-scrollbar {
+    height: 6px;
+	background-color: transparent;
+    color: #000;
+}
+.emoji-bar::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
 .emoji-bar .emoji {
     text-decoration: none;
     font-size: 28px;
@@ -734,11 +749,26 @@ audio {
 .messages {
     margin-top: 20px;
     padding: 10px;
-    height: 300px;
+    height: 295px;
     overflow-y: scroll;
     background: #111;
     border-radius: 10px;
     border: 1px solid #222;
+}
+.messages::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+.messages::-webkit-scrollbar {
+	width: 6px;
+	background-color: transparent;
+    color: #000;
+}
+.messages::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
 .message {
     display: block;
@@ -1073,9 +1103,10 @@ audio {
     top: 80px;
 }
 .secret-popup {
-    padding: 2rem 4rem;
-    border-radius: 30px;
+    padding: 3rem 5rem;
+    border-radius: 14px;
     width: max-content;
+    max-width: 380px;
     height: 250px;
     background: #17043b;
     background-position: center;
@@ -1095,17 +1126,17 @@ audio {
     visibility: visible;
 }
 .secret-popup h3 {
-    margin-top: 1rem;
     font-size: 1.4rem;
+    line-height: 2rem;
     font-weight: 500;
 }
 .secret {
-    width: 280px;
+    width: 326px;
     margin: 2rem 0;
-    padding: 16px 24px;
+    padding: 18px 24px;
     background: #202546;
     border: 2px solid #4d73af;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #e1a312;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -1423,6 +1454,83 @@ audio {
     filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
 }
 
+.content-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(3, 22, 48, 0.96), #010d1dea);
+    z-index: 999999999999999999;
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
+}
+.content-wrapper {
+    margin: 2% 10%;
+    overflow: scroll;
+    max-height: 90vh;
+}
+.content-wrapper::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+.content-wrapper::-webkit-scrollbar {
+	width: 8px;
+	background-color: transparent;
+    color: #000;
+}
+.content-wrapper::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+.heading-top {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+    display: inline-block;
+}
+.popup-content {
+    width: 90%;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-align: justify;
+}
+.popup-content li {
+    list-style-type: none;
+    margin: 1rem 0;
+}
+.bullet {
+    margin-right: 10px;
+    color: #fff;
+}
+.closebutton {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 48px;
+    margin-top: 40px;
+    border-radius: 2px;
+    border: 2px solid #fff;
+}
+.closebutton:hover {
+    background: rgba(255, 255, 255, 0.86);
+    border: 2px solid #fff;
+    color: #051f4d;
+    font-weight: 600;
+}
 
 
 /* ========== Animation CSS =========== */

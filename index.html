@@ -42,14 +42,14 @@
     <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
     <div class="canvas home-canvas" id="canvas">
         <div class="top">
-            <a href="#"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button"></a>
+            <a href="#" id="rulesTrigger"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button" onclick="clickSound()" onmouseover="clickSound()""></a>
         </div>
         <div class="middle">
             <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
         </div>
         <div class="bottom">
             <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
-            <a href="places.html" onclick="playSound()"><img src="images/Icons/Play Now.webp" alt=""></a>
+            <a href="places.html"><img src="images/Icons/Play Now.webp" alt="" onmouseover="playSound()" onmclick="playSound()"></a>
         </div>
     </div>
     <div id="mobile-view">
@@ -63,6 +63,65 @@
         Your browser does not support the audio element.
     </audio>
 
+    <!-- game loading overlay -->
+    <div class="content-popup" id="rules">
+        <div class="content-wrapper">
+            <h1 class="heading-top">How to Play ?</h1>
+            <p class="popup-content">
+                <ul class="popup-content">
+                    <li><span class="bullet">⚛︎</span>For example: You have Imp = 1 Life card. Now you're on the playing screen. </li>
+                    <li><span class="bullet">⚛︎</span>Go ahead and grab Diamond Box. If Police chooses something other than Diamond box like Silver Box, then you looted successfully which will be highlighted on Gameplay mechanics. </li>
+                    <li><span class="bullet">⚛︎</span>Now your loot on the scoreboard is '6-0' right now. 6 representing the Diamond Box, and 0 for the number of life lost. </li>
+                    <li><span class="bullet">⚛︎</span>Let's say in the next round you looted Gold Box and the Police thought Platinum Box, then you again looted box of Gold. </li>
+                    <li><span class="bullet">⚛︎</span>Now your total score is ‘8-0' and you have 0 life’s left. Let's say you plan to loot Platinum Box and police guesses the same. You’re out because police caught You.</li>
+                    <li><span class="bullet">⚛︎</span>Now, since you were only playing with 1 life card, you have lost all your life’s and your turn to loot more boxes is over. </li>
+                    <li><span class="bullet">⚛︎</span>Now, on the playing screen, (your score + 1). This is the number of score the opponent needs to win. So now it’s is your time to be ‘Police’ and opponents time to loot. </li>
+                    <li><span class="bullet">⚛︎</span>The opponent plays 1,0,1,2,0,1 while you tries to catch him guessing 6,6,0,4,1,0. If you sum up the opponents loot, his score is 5 (1+0+1+2+1+0). </li>
+                    <li><span class="bullet">⚛︎</span>Good job Ed! The opponent cannot score anymore loot now because all the life’s are killed. </li>
+                    <li><span class="bullet">⚛︎</span>As you can see, you looted 9-0 with your life at risk and opponent looted 5-0. This means that you were able to rob extra 4 more boxes successfully & claimed as a “True Chor”! 🏆</li>
+                </ul>
+            </p>
+            <a href="#" class="closebutton" id="finish" onclick="playSound()">I have read all the rules Carefully</a>
+        </div>
+    </div>
+
+    <div class="hide">
+        <h2 class="popup-heading">What is Loot Box ?</h2>
+        <p class="popup-content">This is a unit of looting. Basically like 'points'</p>
+        <h2 class="popup-heading">Values of Loot Boxes</h2>
+        <table>
+            <tr>
+                <td>Stone Box</td>
+                <td>:</td>
+                <td>0 Point</td>
+            </tr>
+            <tr>
+                <td>Silver Box</td>
+                <td>:</td>
+                <td>1 Point</td>
+            </tr>
+            <tr>
+                <td>Gold Box</td>
+                <td>:</td>
+                <td>2 Point</td>
+            </tr>
+            <tr>
+                <td>Platinum Box</td>
+                <td>:</td>
+                <td>4 Point</td>
+            </tr>
+            <tr>
+                <td>Diamond Box</td>
+                <td>:</td>
+                <td>6 Point</td>
+            </tr>
+        </table>
+        <h2 class="popup-heading">What is Life?</h2>
+        <p class="popup-content">This is a really good way to prevent opponents from scoring. It is sort of like 'revive' in a game. If you kill all the life, then the opponent can't score any points & the player session ends.</p>
+        <h2 class="popup-heading">What do you mean by Timer?</h2>
+        <p class="popup-content">This is a limiting factor for the game. If you don't kill all the life of the opponent, the only thing that stops the opponent from looting is the timer. When the chorr has completed his 7 minutes of session, he can’t loot anymore. Also each round to play would be of 10 seconds to grab the loot box before the timer runs out.</p>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>
@@ -72,15 +131,17 @@
             document.getElementById("audioSource").play();
         }
 
+        $('#finish').on('click', function(){
+            $('#rules').addClass('hide');
+        });
+
+        document.getElementById('rulesTrigger').onclick = function() {
+            document.getElementById('rules').classList.remove('hide')
+        };
+
     </script>
 
     <script src="main.js"></script>
-
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script> -->
 
 </body>
 </html>
