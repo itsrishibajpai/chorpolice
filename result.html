@@ -44,8 +44,8 @@
             <div class="footer">
                 <h4 class="statement">You just lost the Chorr!</h4>
                 <div class="button-group">
-                    <a href="index.html" class="buttonblue">HOME</a>
-                    <a href="#" class="buttonblue" id="ask">PLAY AGAIN</a>
+                    <a href="index.html" class="buttonblue" onmouseenter="playSound()" onclick="playSound()">HOME</a>
+                    <a href="#" class="buttonblue" id="ask" onmouseenter="playSound()" onclick="playSound()">PLAY AGAIN</a>
                 </div>
             </div>
         </div>
@@ -55,8 +55,8 @@
         <div class="play-again">
             <h2>George is asking you to play again?</h2>
             <div class="button-group">
-                <a href="index.html" class="buttonwhite">Not Interested</a>
-                <a href="http://127.0.0.1:5500/playground.html?filename=meuseumbg.webp" class="buttonwhite">Play Again</a>
+                <a href="index.html" class="buttonwhite" onmouseenter="playSound()" onclick="playSound()">Not Interested</a>
+                <a href="http://127.0.0.1:5500/playground.html?filename=meuseumbg.webp" class="buttonwhite" onmouseenter="playSound()" onclick="playSound()">Play Again</a>
             </div>
         </div>
     </div>
@@ -68,7 +68,9 @@
     </div>
 
     <audio controls id="audioSource">
-        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/mp3/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/m4a/clicksound.m4a" type="audio/m4a">
+        <source src="/sounds/wav/clicksound.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
 

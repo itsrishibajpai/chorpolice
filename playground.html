@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="responsive.css">
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <style>
         body{
             overflow: hidden;
@@ -22,7 +21,7 @@
         <div id="topbar">
             <div class="flex-console" id="chor-side">
                 <a href="#" class="chat" id="chor-chat">
-                    <img src="images/Icons/chatblue.webp" class="chaticon"/>
+                    <img src="images/Icons/chatblue.webp" class="chaticon" onclick="chatSound();" onmouseenter="chatSound();"/>
                 </a>
                 <div id="heart">
                     <span class="lifecount" id="chorlife">2</span>
@@ -36,7 +35,7 @@
                             <span class="score wickets">0</span>
                             <span class="title">AHMED</span>
                         </div>
-                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showChorChance();" alt=""></div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showChorChance();" onmouseenter="showChorChance();" alt=""></div>
                     </div>
                     <div class="box">
                         <div id="chor-top" class="top-border"></div>
@@ -67,13 +66,13 @@
                             <span class="score wickets">0</span>
                             <span class="title">GEORGE</span>
                         </div>
-                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showPoliceChance();" alt=""></div>
+                        <div class="circle"><img src="images/Icons/Plus_icon.webp" onclick="showPoliceChance();" onmouseenter="showPoliceChance()" alt=""></div>
                     </div>
                 </div>
                 <div id="heart">
                     <span class="lifecount" id="policelife">2</span>
                 </div>
-                <a href="#" class="chat" id="police-chat">
+                <a href="#" class="chat" id="police-chat" onclick="chatSound();" onmouseenter="chatSound();">
                     <img src="images/Icons/chatblue.webp" class="chaticon"/>
                 </a> 
             </div>   
@@ -83,11 +82,11 @@
             <!-- <a href="#" id="stonebox">
                 
             </a> -->
-            <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Silver.webp" alt="box" id="silver" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Gold.webp" alt="box" id="gold" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
-            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" onclick="startConfetti();" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Stone Box.webp" alt="box" id="stone" onclick="startConfetti();" onmouseenter="boxSound()" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Silver.webp" alt="box" id="silver" onclick="startConfetti();" onmouseenter="boxSound()" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Gold.webp" alt="box" id="gold" onclick="startConfetti();" onmouseenter="boxSound()" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Platinum.webp" alt="box" id="platinum" onclick="startConfetti();" onmouseenter="boxSound()" class="floating-box animatebox" data-aos="zoom-in">
+            <img src="images/Boxes/Diamond.webp" alt="box" id="diamond" onclick="startConfetti();" onmouseenter="boxSound()" class="floating-box animatebox" data-aos="zoom-in">
         </div>
 
         <div class="progress">
@@ -200,17 +199,137 @@
         </div>
     </div>
 
-    <audio controls id="audioSource">
-        <source src="/sounds/box-select.wav" type="audio/wav">
-        <source src="/sounds/box-select.mp3" type="audio/mp3">
-        <source src="/sounds/box-select.m4a" type="audio/m4a">
-        Your browser does not support the audio element.
-    </audio>
+    <!-- All Audios -->
+    <div class="hidden">
+        <!-- box selection sound -->
+        <audio controls id="boxSelect">
+            <source src="/sounds/wav/box-select.wav" type="audio/wav">
+            <source src="/sounds/mp3/box-select.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/box-select.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- box selection sound -->
+        <audio controls id="chatPop">
+            <source src="/sounds/wav/chatpopup.wav" type="audio/wav">
+            <source src="/sounds/mp3/chatpopup.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/chatpopup.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- message receive sound -->
+        <audio controls id="msgSent">
+            <source src="/sounds/wav/game-unlock.wav" type="audio/wav">
+            <source src="/sounds/mp3/game-unlock.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/game-unlock.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- before box selection sound -->
+        <audio controls id="beforeBox">
+            <source src="/sounds/wav/cubeBeforeSelection.wav" type="audio/wav">
+            <source src="/sounds/mp3/cubeBeforeSelection.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/cubeBeforeSelection.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- box after selection sound -->
+        <audio controls id="afterBox">
+            <source src="/sounds/wav/cubeAfterSelection.wav" type="audio/wav">
+            <source src="/sounds/mp3/cubeAfterSelection.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/cubeAfterSelection.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- the file voiceover.mp3 needs to be broken into these 4 pieces -->
+        <!-- player win voiceover -->
+        <!-- <audio controls id="playerWin">
+            <source src="/sounds/wav/playerWin.wav" type="audio/wav">
+            <source src="/sounds/mp3/playerWin.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/playerWin.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio> -->
+
+        <!-- bonus round -->
+        <!-- <audio controls id="bonusRound">
+            <source src="/sounds/wav/bonusRound.wav" type="audio/wav">
+            <source src="/sounds/mp3/bonusRound.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/bonusRound.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio> -->
+
+        <!-- player lose voiceover -->
+        <!-- <audio controls id="playerLose">
+            <source src="/sounds/wav/playerLose.wav" type="audio/wav">
+            <source src="/sounds/mp3/playerLose.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/playerLose.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio> -->
+
+        <!-- game over voiceover -->
+        <!-- <audio controls id="gameOver">
+            <source src="/sounds/wav/gameOver.wav" type="audio/wav">
+            <source src="/sounds/mp3/gameOver.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/gameOver.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio> -->
+
+        <!-- scoreboard winner -->
+        <audio controls id="sboardWinner">
+            <source src="/sounds/wav/scoreboardWinner.wav" type="audio/wav">
+            <source src="/sounds/mp3/scoreboardWinner.mp3" type="audio/mp3">
+            <source src="/sounds/m4a/scoreboardWinner.m4a" type="audio/m4a">
+            Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
 </body>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+
+    //for box select sound
+    function boxSound() {
+        document.getElementById('boxSelect').play();
+    }
+    //for chat popup
+    function chatSound() {
+        document.getElementById('chatPop').play();
+    }
+    //for message sent
+    function msgSound() {
+        document.getElementById('msgSent').play();
+    }
+    //box after selection
+    function afterBoxSound() {
+        document.getElementById('afterBox').play();
+    }
+    //player win
+    function playerWinVo() {
+        document.getElementById('playerWin').play();
+    }
+    //bonus round
+    function bonusRound() {
+        document.getElementById('bonusRound').play();
+    }
+    //player lose
+    function playerLose() {
+        document.getElementById('playerLose').play();
+    }
+    //game over
+    function gameOver() {
+        document.getElementById('gameOver').play();
+    }
+    //scoreboard winner
+    function sboardWinner() {
+        document.getElementById('sboardWinner').play();
+    }
+
+    //before box selection
+    window.onload = function beforeBoxSound() {
+       document.getElementById('beforeBox').play();
+    }
+
 </script>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script src="main.js"></script>

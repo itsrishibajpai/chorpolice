@@ -151,6 +151,7 @@ for(i = 0; i<cMessages.length; i++) {
         $('#chormsg').removeClass('hide');
         $('#chormsg').addClass('msganimate');
         $('#policesent').html(clickedMessage);
+        msgSound();
         setTimeout(function(){
             $('#chormsg').addClass('hide');
         }, 4000);
@@ -166,6 +167,7 @@ for(i = 0; i<cReactions.length; i++) {
         $('#chormoji').addClass('msganimate');
         $('#chormoji').addClass('enlarge');
         $('#policesentmoji').html(clickedMessage);
+        msgSound();
         setTimeout(function(){
             $('#chormoji').addClass('hide');
         }, 4000);
@@ -181,6 +183,7 @@ for(i = 0; i<pMessages.length; i++) {
         $('#policemsg').removeClass('hide');
         $('#policemsg').addClass('msganimate');
         $('#chorsent').html(clickedMessage);
+        msgSound();
         setTimeout(function(){
             $('#policemsg').addClass('hide');
         }, 4000);
@@ -196,6 +199,7 @@ for(i = 0; i<pReactions.length; i++) {
         $('#policemoji').addClass('msganimate');
         $('#policemoji').addClass('enlarge');
         $('#chorsentmoji').html(clickedMessage);
+        msgSound();
         setTimeout(function(){
             $('#policemoji').addClass('hide');
         }, 4000);

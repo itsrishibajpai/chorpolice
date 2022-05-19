@@ -1500,6 +1500,16 @@ audio {
     margin-top: 2rem;
     display: inline-block;
 }
+.popup-heading {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+    display: inline-block;
+}
 .popup-content {
     width: 90%;
     color: #ccc;
@@ -1530,6 +1540,13 @@ audio {
     border: 2px solid #fff;
     color: #051f4d;
     font-weight: 600;
+}
+.content-wrapper table {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+.content-wrapper table tr td {
+    padding: 6px 24px 6px 0px;
 }
 
 

@@ -42,22 +42,22 @@
         <div class="slidewrapper">
             <div class="slider">
 
-                <a class="item" onclick="playSound()" id="bank">
+                <a class="item" onclick="playSound()" onmouseenter="playSound()" id="bank">
                     <img src="images/Levels/Bank_Treasury.webp" alt="" onclick="window.open('bank.html')" usemap="#image-map">
                     <map name="image-map">
                         <area target="_self" alt="terms" title="terms" href="#" coords="446,0,445,54,484,83,525,55,524,0" shape="poly" onmouseover="alert('triggered');">
                     </map>
                 </a>
 
-                <a class="item" onclick="playSound()" id="temple">
+                <a class="item" onclick="playSound()" onmouseenter="playSound()" id="temple">
                     <img src="images/Levels/Golden_Temple.webp" alt="" onclick="window.open('temple.html')">
                 </a>
 
-                <a class="item" onclick="playSound()" id="meuseum">
+                <a class="item" onclick="playSound()" onmouseenter="playSound()" id="meuseum">
                     <img src="images/Levels/Art_Mesuem.webp" alt="" onclick="window.open('museum.html')">
                 </a>
 
-                <a class="item" onclick="playSound()" id="palace">
+                <a class="item" onclick="playSound()" onmouseenter="playSound()" id="palace">
                     <img src="images/Levels/Kings_Palace.webp" alt="" onclick="window.open('palace.html')">
                 </a>
 
@@ -65,13 +65,13 @@
         </div>
         <div class="bottomnav">
             <a href="index.html">
-                <img src="images/Icons/Home_backButton.webp" alt="back" class="icons" onclick="clickSound()" onmouseover="clickSound()">
+                <img src="images/Icons/Home_backButton.webp" alt="back" class="icons" onclick="clickSound()" onmouseenter="clickSound()">
             </a>
             <a href="#" id="rulesTrigger">
-                <img src="images/Icons/Homepage Rules.webp" alt="rules" class="icons" onclick="clickSound()" onmouseover="clickSound()">
+                <img src="images/Icons/offerbanner.webp" alt="rules" class="icons" onclick="clickSound()" onmouseenter="clickSound()">
             </a>
             <a href="#">
-                <img src="images/Icons/Homepage_Friends.webp" alt="group" class="icons" onclick="clickSound()" onmouseover="clickSound()">
+                <img src="images/Icons/Homepage_Friends.webp" alt="group" class="icons" onclick="clickSound()" onmouseenter="clickSound()">
             </a>
         </div>
     </div>
@@ -81,29 +81,29 @@
         <div id="bank-popup" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="bank.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-                <a href="#" id="bankFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+                <a href="bank.html" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="bankFriends" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="temple-popup" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="temple.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-                <a href="#" id="templeFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+                <a href="temple.html" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="templeFriends" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="meuseum-popup" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="meuseum.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-                <a href="#" id="meuseumFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+                <a href="meuseum.html" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="meuseumFriends" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="palace-popup" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="palace.html"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
-                <a href="#" id="palaceFriends"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
+                <a href="palace.html" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_Online.webp" alt="" class="option"></a>
+                <a href="#" id="palaceFriends" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Play_With_Friends.webp" alt="" class="option"></a>
             </div>
         </div>
     </div>
@@ -113,29 +113,29 @@
         <div id="bank-friends" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="#" id="bankSecretCode"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
-                <a href="#" id="copyBankSecret"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
+                <a href="#" id="bankSecretCode" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
+                <a href="#" id="copyBankSecret" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="temple-friends" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="#" id="templeSecretCode"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
-                <a href="#" id="copyTempleSecret"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
+                <a href="#" id="templeSecretCode" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
+                <a href="#" id="copyTempleSecret" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="meuseum-friends" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="#" id="meuseumSecretCode"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
-                <a href="#" id="copyMeuseumSecret"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
+                <a href="#" id="meuseumSecretCode" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
+                <a href="#" id="copyMeuseumSecret" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
             </div>
         </div>
         <div id="palace-friends" class="game-popup">
             <!-- <span class="close"></span> -->
             <div class="selections">
-                <a href="#" id="palaceSecretCode"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
-                <a href="#" id="copyPalaceSecret"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
+                <a href="#" id="palaceSecretCode" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Create Match.webp" alt="" class="option"></a>
+                <a href="#" id="copyPalaceSecret" onclick="clickSound()" onmouseenter="clickSound()"><img src="images/Icons/Join Match.webp" alt="" class="option"></a>
             </div>
         </div>
     </div>
@@ -146,25 +146,25 @@
             <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
-            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
+            <a href="#" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="templeCopy" class="secret-popup">
             <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
-            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
+            <a href="#" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="meuseumCopy" class="secret-popup">
             <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
-            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
+            <a href="#" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()" onclick="copyToClipboard()">Copy Code</a>
         </div>
         <div id="palaceCopy" class="secret-popup">
             <h3>Share the Secret code with your friend:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" value="hbfjkb8139410bahdb#678%$bkdsbfjef" required readonly/><br/>
-            <a href="#" class="popup-btn" onclick="copyToClipboard()">Copy Code</a>
+            <a href="#" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()" onclick="copyToClipboard()">Copy Code</a>
         </div>
     </div>
 
@@ -174,25 +174,25 @@
             <h3>Enter the secret code:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" required/><br/>
-            <a href="bank.html" class="popup-btn">Join Now</a>
+            <a href="bank.html" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()">Join Now</a>
         </div>
         <div id="temple-secret" class="secret-popup">
             <h3>Enter the secret code:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" required/><br/>
-            <a href="temple.html" class="popup-btn">Join Now</a>
+            <a href="temple.html" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()">Join Now</a>
         </div>
         <div id="meuseum-secret" class="secret-popup">
             <h3>Enter the secret code:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" required/><br/>
-            <a href="meuseum.html" class="popup-btn">Join Now</a>
+            <a href="meuseum.html" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()">Join Now</a>
         </div>
         <div id="palace-secret" class="secret-popup">
             <h3>Enter the secret code:</h3>
             <!-- <span class="close-popup"></span> -->
             <input type="text" class="secret" required/><br/>
-            <a href="palace.html" class="popup-btn">Join Now</a>
+            <a href="palace.html" class="popup-btn" onclick="clickSound()" onmouseenter="clickSound()">Join Now</a>
         </div>
     </div>
 
@@ -214,7 +214,7 @@
                     <li><span class="bullet">⚛︎</span>As you can see, you looted 9-0 with your life at risk and opponent looted 5-0. This means that you were able to rob extra 4 more boxes successfully & claimed as a “True Chor”! 🏆</li>
                 </ul>
             </p>
-            <a href="#" class="closebutton" id="finish" onclick="clickSound()" onmouseover="clickSound()">I have read all the rules Carefully</a>
+            <a href="#" class="closebutton" id="finish" onclick="clickSound()" onmouseenter="clickSound()">I have read all the rules Carefully</a>
         </div>
     </div>
 
@@ -225,14 +225,16 @@
     </div>
 
     <audio controls id="audioSource">
-        <source src="/sounds/level-select.wav" type="audio/wav">
-        <source src="/sounds/level-select.mp3" type="audio/mp3">
-        <!-- <source src="/sounds/level-select.m4a" type="audio/m4a"> -->
+        <source src="/sounds/wav/level-select.wav" type="audio/wav">
+        <source src="/sounds/mp3/level-select.mp3" type="audio/mp3">
+        <source src="/sounds/m4a/level-select.m4a" type="audio/m4a">
         Your browser does not support the audio element.
     </audio>
 
     <audio controls id="clickSound">
-        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/mp3/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/m4a/clicksound.m4a" type="audio/m4a">
+        <source src="/sounds/wav/clicksound.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
 

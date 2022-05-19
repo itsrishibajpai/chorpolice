@@ -42,14 +42,14 @@
     <!-- <a href="#" id="trigger">Click to Fullscreen</a> -->
     <div class="canvas home-canvas" id="canvas">
         <div class="top">
-            <a href="#" id="rulesTrigger"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button" onclick="clickSound()" onmouseover="clickSound()""></a>
+            <a href="#" id="rulesTrigger"><img src="images/Icons/Homepage Rules.webp" class="info-button" alt="info button" onclick="clickSound()" onmouseenter="clickSound()""></a>
         </div>
         <div class="middle">
             <img src="images/Logo/Logo.webp" class="logo mainlogo" alt="">
         </div>
         <div class="bottom">
             <img src="images/Characters/Homepage_chracters.webp" alt="" class="characters">
-            <a href="places.html"><img src="images/Icons/Play Now.webp" alt="" onmouseover="playSound()" onmclick="playSound()"></a>
+            <a href="places.html"><img src="images/Icons/Play Now.webp" alt="" onmouseenter="playSound()" onclick="playSound()"></a>
         </div>
     </div>
     <div id="mobile-view">
@@ -59,7 +59,16 @@
     </div>
 
     <audio controls id="audioSource">
-        <source src="/sounds/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/mp3/clicksound.mp3" type="audio/mp3">
+        <source src="/sounds/m4a/clicksound.m4a" type="audio/m4a">
+        <source src="/sounds/wav/clicksound.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio controls id="openingAudio">
+        <source src="/sounds/mp3/intromusic.mp3" type="audio/mp3">
+        <source src="/sounds/m4a/intromusic.m4a" type="audio/m4a">
+        <source src="/sounds/wav/intromusic.wav" type="audio/wav">
         Your browser does not support the audio element.
     </audio>
 
@@ -81,45 +90,114 @@
                     <li><span class="bullet">⚛︎</span>As you can see, you looted 9-0 with your life at risk and opponent looted 5-0. This means that you were able to rob extra 4 more boxes successfully & claimed as a “True Chor”! 🏆</li>
                 </ul>
             </p>
-            <a href="#" class="closebutton" id="finish" onclick="playSound()">I have read all the rules Carefully</a>
-        </div>
-    </div>
+            <h2 class="popup-heading">What is Loot Box ?</h2>
+            <p class="popup-content">This is a unit of looting. Basically like 'points'</p>
+            <h2 class="popup-heading">Values of Loot Boxes</h2>
+            <table>
+                <tr>
+                    <td>Stone Box</td>
+                    <td>:</td>
+                    <td>0 Point</td>
+                </tr>
+                <tr>
+                    <td>Silver Box</td>
+                    <td>:</td>
+                    <td>1 Point</td>
+                </tr>
+                <tr>
+                    <td>Gold Box</td>
+                    <td>:</td>
+                    <td>2 Point</td>
+                </tr>
+                <tr>
+                    <td>Platinum Box</td>
+                    <td>:</td>
+                    <td>4 Point</td>
+                </tr>
+                <tr>
+                    <td>Diamond Box</td>
+                    <td>:</td>
+                    <td>6 Point</td>
+                </tr>
+            </table>
+            <h2 class="popup-heading">What is Life?</h2>
+            <p class="popup-content">This is a really good way to prevent opponents from scoring. It is sort of like 'revive' in a game. If you kill all the life, then the opponent can't score any points & the player session ends.</p>
+            <h2 class="popup-heading">What do you mean by Timer?</h2>
+            <p class="popup-content">This is a limiting factor for the game. If you don't kill all the life of the opponent, the only thing that stops the opponent from looting is the timer. When the chorr has completed his 7 minutes of session, he can’t loot anymore. Also each round to play would be of 10 seconds to grab the loot box before the timer runs out.</p>
+            <h2 class="popup-heading">NFT Heirarchy</h2>
+            <p class="popup-content">
+                For example: You have “Yaga” & the opponent has ‘Imp’ You chose ‘100 TWM Points’ match to play. Based on hierarchy of your NFT you get the chance to choose the role initially “Chorr OR Police”. If you select Chorr. This means that you are going to loot first & opponent will try to catching by guessing the correct loot box at the same time also due to the NFT profile you have, Chorr will have 5 life’s to revive himself & increase his loot.
+            </p>
+            <table>
+                <tr>
+                    <td>Imp</td>
+                    <td>:</td>
+                    <td>1 Life</td>
+                </tr>
+                <tr>
+                    <td>Rita</td>
+                    <td>:</td>
+                    <td>1 Life</td>
+                </tr>
+                <tr>
+                    <td>Athena</td>
+                    <td>:</td>
+                    <td>2 Life</td>
+                </tr>
+                <tr>
+                    <td>Madam Black</td>
+                    <td>:</td>
+                    <td>3 Life</td>
+                </tr>
+                <tr>
+                    <td>Denise Edwin</td>
+                    <td>:</td>
+                    <td>4 Life</td>
+                </tr>
+                <tr>
+                    <td>Yaga</td>
+                    <td>:</td>
+                    <td>5 Life</td>
+                </tr>
+                <tr>
+                    <td>Zhoron</td>
+                    <td>:</td>
+                    <td>2 Life</td>
+                </tr>
+                <tr>
+                    <td>Elion</td>
+                    <td>:</td>
+                    <td>3 Life</td>
+                </tr>
+                <tr>
+                    <td>Quinlee</td>
+                    <td>:</td>
+                    <td>4 Life</td>
+                </tr>
+                <tr>
+                    <td>Dark Horse</td>
+                    <td>:</td>
+                    <td>6 Life</td>
+                </tr>
+                <tr>
+                    <td>Silveste</td>
+                    <td>:</td>
+                    <td>9 Life</td>
+                </tr>
+                <tr>
+                    <td>Everbleed</td>
+                    <td>:</td>
+                    <td>6 Life</td>
+                </tr>
+                <tr>
+                    <td>Conrad</td>
+                    <td>:</td>
+                    <td>7 Life</td>
+                </tr>
+            </table>
 
-    <div class="hide">
-        <h2 class="popup-heading">What is Loot Box ?</h2>
-        <p class="popup-content">This is a unit of looting. Basically like 'points'</p>
-        <h2 class="popup-heading">Values of Loot Boxes</h2>
-        <table>
-            <tr>
-                <td>Stone Box</td>
-                <td>:</td>
-                <td>0 Point</td>
-            </tr>
-            <tr>
-                <td>Silver Box</td>
-                <td>:</td>
-                <td>1 Point</td>
-            </tr>
-            <tr>
-                <td>Gold Box</td>
-                <td>:</td>
-                <td>2 Point</td>
-            </tr>
-            <tr>
-                <td>Platinum Box</td>
-                <td>:</td>
-                <td>4 Point</td>
-            </tr>
-            <tr>
-                <td>Diamond Box</td>
-                <td>:</td>
-                <td>6 Point</td>
-            </tr>
-        </table>
-        <h2 class="popup-heading">What is Life?</h2>
-        <p class="popup-content">This is a really good way to prevent opponents from scoring. It is sort of like 'revive' in a game. If you kill all the life, then the opponent can't score any points & the player session ends.</p>
-        <h2 class="popup-heading">What do you mean by Timer?</h2>
-        <p class="popup-content">This is a limiting factor for the game. If you don't kill all the life of the opponent, the only thing that stops the opponent from looting is the timer. When the chorr has completed his 7 minutes of session, he can’t loot anymore. Also each round to play would be of 10 seconds to grab the loot box before the timer runs out.</p>
+            <a href="#" class="closebutton" id="finish" onclick="playSound()" onmouseenter="playSound()">I have read all the rules Carefully</a>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -131,12 +209,16 @@
             document.getElementById("audioSource").play();
         }
 
+        window.onload = function () { 
+            document.getElementById("openingAudio").play();
+        }
+
         $('#finish').on('click', function(){
             $('#rules').addClass('hide');
         });
 
         document.getElementById('rulesTrigger').onclick = function() {
-            document.getElementById('rules').classList.remove('hide')
+            //document.getElementById('rules').classList.remove('hide')
         };
 
     </script>
