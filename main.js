@@ -9,9 +9,9 @@ $('#trigger').on('click', function() {
 
 ////////// scripts for playground page ///////////
 //code to play the sound
-function playSound () {
-    document.getElementById("audioSource").play();
-}
+// function playSound () {
+//     document.getElementById("audioSource").play();
+// }
 
 /* code for slider */
 function getQueryVariable(variable) {
@@ -43,7 +43,7 @@ function glow(id)
     $(".floating-box").removeClass("animatebox");
     $(`#${id}`).removeClass("faded");
     $(`#${id}`).addClass("activebox");
-    playSound();
+    // playSound();
     glow = () => {};
 }
 

@@ -1548,7 +1548,9 @@ audio {
 .content-wrapper table tr td {
     padding: 6px 24px 6px 0px;
 }
-
+.offer {
+    height: 102px;
+}
 
 /* ========== Animation CSS =========== */
 @keyframes spinRightCoin {
